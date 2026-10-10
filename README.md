@@ -1,2 +1,1193 @@
 # Blue-Team-Tools
-    Blue-Team-Tools is a comprehensive collection of resources designed for Defensive Security (Blue Team) operations. This repository serves as a centralized index for online utilities, open-source software, and frameworks used in Incident Response, Threat Hunting, Digital Forensics, and Security Operations Center (SOC) workflows.
+
+<div align="center" style="margin: 30px 0;">
+
+> A curated list of defensive security tools, online utilities, and software for Blue Team operations. This collection includes resources for DFIR, threat hunting, SOC analysis, malware analysis, and network defense.
+
+![Blue Team Anime](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHJjMXpvb2hkdXJvN2Y3cmllNG81YXNsem90ejhwY2NqbXB5OXgzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/137EaR4vAOCn1S/giphy.gif)
+
+</div>
+<br>
+
+---
+
+## Table of Contents
+
+- [🔍 Threat Intelligence & OSINT](#-threat-intelligence--osint)
+- [🛡️ Endpoint Detection & Response (EDR)](#️-endpoint-detection--response-edr)
+- [📡 Network Security & Monitoring](#-network-security--monitoring)
+- [🔎 SIEM & Log Analysis](#-siem--log-analysis)
+- [🧑‍💻 Digital Forensics & Incident Response (DFIR)](#-digital-forensics--incident-response-dfir)
+- [🦠 Malware Analysis](#-malware-analysis)
+- [🌐 Web Application Defense](#-web-application-defense)
+- [🔐 Identity & Access Management](#-identity--access-management)
+- [⏳ Vulnerability Management](#-vulnerability-management)
+- [📊 Security Awareness & Training](#-security-awareness--training)
+- [🧩 Miscellaneous](#-miscellaneous)
+
+---
+
+# Threat Intelligence & OSINT
+
+- 🌐 **[VirusTotal](https://www.virustotal.com/)** - Analyze suspicious files, domains, IPs, and URLs to detect malware and other breaches, and automatically share them with the security community.
+- 🕵️ **[AlienVault OTX](https://otx.alienvault.com/)** - Open Threat Exchange is the world's largest crowd-sourced threat intelligence community, providing open access to indicators of compromise (IOCs).
+- 🔎 **[AbuseIPDB](https://www.abuseipdb.com/)** - A central repository to report and identify IP addresses involved in malicious activities like hacking, spamming, and botnets.
+- 🛡️ **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for gathering, sharing, storing, and correlating IOCs, indicators of compromise, and threat intelligence.
+- 📊 **[ThreatFox](https://threatfox.abuse.ch/)** - An open platform for sharing malware indicators of compromise, powered by abuse.ch.
+- 🌍 **[Shodan](https://www.shodan.io/)** - Search engine for internet-connected devices, allowing security professionals to discover exposed services and assess attack surfaces.
+- 🔥 **[Censys](https://censys.io/)** - Internet-wide scanning platform for discovering and monitoring hosts, networks, and services exposed to the internet.
+- 🧑‍💻 **[GreyNoise Intelligence](https://www.greynoise.io/)** - A system that collects and analyzes internet-wide scan and attack traffic, helping analysts filter out benign noise and focus on real threats.
+- 📡 **[URLhaus](https://urlhaus.abuse.ch/)** - A database of malicious URLs used for malware distribution, maintained by abuse.ch.
+- 🧪 **[Hybrid Analysis](https://www.hybrid-analysis.com/)** - A free malware analysis service powered by Falcon Sandbox that provides detailed reports for submitted files and URLs.
+- 🔬 **[Joe Sandbox](https://www.joesandbox.com/)** - Deep malware analysis platform for detecting and analyzing malicious files and URLs in a sandboxed environment.
+- 📨 **[PhishTank](https://phishtank.org/)** - A collaborative clearing house for data and information about phishing on the internet, allowing users to submit and verify phishing URLs.
+- 🌐 **[OpenPhish](https://openphish.com/)** - A phishing intelligence feed that provides real-time phishing URL data to help organizations detect and block phishing attacks.
+- 🕸️ **[MalwareBazaar](https://bazaar.abuse.ch/)** - A malware sample sharing platform by abuse.ch, allowing researchers to download and share malware samples for analysis.
+- 🧠 **[ThreatMiner](https://www.threatminer.org/)** - A free threat intelligence portal that provides data about malware, domains, IPs, and hashes to support incident response and threat hunting.
+- 🔗 **[Intelligence X](https://intelx.io/)** - A search engine and data archive that provides access to leaked data, darknet intelligence, and historical threat intelligence.
+- 📜 **[Feodo Tracker](https://feodotracker.abuse.ch/)** - A project by abuse.ch that tracks botnet command-and-control (C2) servers associated with Dridex, Emotet, TrickBot, and QakBot.
+- 🕵️ **[SSL Blacklist](https://sslbl.abuse.ch/)** - A project by abuse.ch that provides a blacklist of SSL certificates associated with malware and botnet C2 infrastructure.
+- 🌍 **[Talos Intelligence](https://talosintelligence.com/)** - Cisco Talos threat intelligence platform providing reputation checks, vulnerability data, and threat research.
+- 📊 **[IBM X-Force Exchange](https://exchange.xforce.ibmcloud.com/)** - A cloud-based threat intelligence sharing platform that provides access to IBM and community-sourced threat data.
+- 🔍 **[Recorded Future](https://www.recordedfuture.com/)** - Commercial threat intelligence platform that aggregates and analyzes data from open, dark, and technical sources.
+- 🧑‍💻 **[Mandiant Advantage](https://www.mandiant.com/advantage)** - Threat intelligence platform providing curated intelligence, threat hunting, and incident response support.
+- 🛡️ **[Anomali](https://www.anomali.com/)** - Threat intelligence platform that integrates with existing security infrastructure to provide actionable intelligence.
+- 📡 **[ThreatConnect](https://threatconnect.com/)** - Threat intelligence platform that combines intelligence analysis, automation, and response capabilities.
+- 🌐 **[URLScan.io](https://urlscan.io/)** - A free service to scan and analyze websites, providing detailed information about domains, IPs, and resources loaded by web pages.
+- 🧪 **[Any.run](https://any.run/)** - Interactive online malware analysis sandbox that provides real-time visibility into malware behavior.
+- 🔎 **[Cuckoo Sandbox](https://cuckoosandbox.org/)** - Open-source automated malware analysis system for analyzing suspicious files in an isolated environment.
+- 🕵️ **[FireHOL IP Lists](https://iplists.firehol.org/)** - A curated collection of IP blocklists for firewalls and intrusion detection systems, aggregating data from multiple threat intelligence sources.
+- 🧑‍💻 **[YARA Rules](https://github.com/Yara-Rules/rules)** - A community-driven repository of YARA rules for malware detection and classification.
+- 📜 **[Sigma Rules](https://github.com/SigmaHQ/sigma)** - A generic and open signature format for SIEM systems, allowing detection rules to be shared across different platforms.
+- 🌍 **[Emerging Threats](https://rules.emergingthreats.net/)** - A collection of IDS/IPS rules for Snort and Suricata, maintained by Proofpoint.
+- 🔥 **[MITRE ATT&CK](https://attack.mitre.org/)** - A globally accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations.
+- 📊 **[MITRE D3FEND](https://d3fend.mitre.org/)** - A knowledge graph of defensive countermeasures mapped to MITRE ATT&CK techniques, helping defenders select appropriate mitigations.
+- 🧠 **[CAR (Cyber Analytics Repository)](https://car.mitre.org/)** - A knowledge base of analytics developed by MITRE to detect adversary behavior mapped to ATT&CK.
+- 🛡️ **[STIX/TAXII](https://oasis-open.github.io/cti-documentation/)** - Standards for structured threat intelligence sharing, enabling automated exchange of cyber threat intelligence.
+- 📡 **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence knowledge and observables, built on STIX 2.1.
+- 🕸️ **[TheHive Project](https://thehive-project.org/)** - Scalable, open-source, and free security incident response platform designed to make life easier for SOCs, CSIRTs, and CERTs.
+- 🔗 **[Cortex](https://github.com/TheHive-Project/Cortex)** - A powerful observable analysis and active response engine that integrates with TheHive for automated threat intelligence enrichment.
+- 🌐 **[Yeti](https://yeti-platform.github.io/)** - A platform for organizing threat intelligence data, including observables, indicators, and TTPs, with a focus on collaboration.
+- 🧑‍💻 **[ManaTI](https://github.com/SpiderLabs/ManaTI)** - A threat intelligence platform that aggregates and correlates threat data from multiple sources.
+- 📜 **[Threat Dragon](https://owasp.org/www-project-threat-dragon/)** - OWASP threat modeling tool that helps identify and mitigate security threats during the design phase.
+- 🔎 **[Maltego](https://www.maltego.com/)** - A powerful OSINT and link analysis tool for gathering and correlating threat intelligence from multiple sources.
+- 🕵️ **[SpiderFoot](https://github.com/smicallef/spiderfoot)** - An open-source intelligence automation tool that integrates with multiple data sources to gather threat intelligence.
+- 🌍 **[theHarvester](https://github.com/laramies/theHarvester)** - A tool for gathering emails, subdomains, hosts, and other open-source intelligence from public sources.
+- 📊 **[Recon-ng](https://github.com/lanmaster53/recon-ng)** - A full-featured web reconnaissance framework with a modular approach to open-source intelligence gathering.
+- 🧪 **[OSINT Framework](https://osintframework.com/)** - A collection of OSINT tools and resources organized by category, useful for threat intelligence gathering.
+- 🛡️ **[Have I Been Pwned](https://haveibeenpwned.com/)** - A free service that allows users to check if their email or phone number has been compromised in a data breach.
+- 🔐 **[DeHashed](https://www.dehashed.com/)** - A search engine for breached data, allowing security professionals to check for compromised credentials and sensitive information.
+- 🧑‍💻 **[Intelligence X](https://intelx.io/)** - A search engine and data archive for leaked data, darknet intelligence, and historical threat intelligence.
+- 📡 **[DarkOwl](https://www.darkowl.com/)** - Commercial darknet intelligence platform providing visibility into dark web activity and threat actor communications.
+- 🌐 **[Recorded Future](https://www.recordedfuture.com/)** - Threat intelligence platform that aggregates and analyzes data from open, dark, and technical sources to provide actionable intelligence.
+- 🕵️ **[Flashpoint](https://www.flashpoint-intel.com/)** - Threat intelligence platform specializing in dark web, fraud, and cybercrime intelligence.
+- 🔎 **[Intel471](https://intel471.com/)** - Threat intelligence provider offering curated intelligence from underground forums, marketplaces, and dark web sources.
+- 🧠 **[KELA](https://www.kelacyber.com/)** - Threat intelligence platform providing actionable intelligence from dark web sources to help organizations proactively defend against cyber threats.
+- 📊 **[SOCRadar](https://socradar.io/)** - Extended threat intelligence platform providing digital risk protection, dark web monitoring, and threat intelligence.
+- 🛡️ **[ZeroFox](https://www.zerofox.com/)** - External threat intelligence platform providing protection against social media threats, phishing, and impersonation.
+- 🌍 **[Digital Shadows](https://www.digitalshadows.com/)** - Threat intelligence platform providing visibility into external threats, including data leaks, brand abuse, and dark web activity.
+- 🔥 **[Flashpoint](https://www.flashpoint-intel.com/)** - Threat intelligence platform specializing in dark web, fraud, and cybercrime intelligence.
+- 📜 **[ThreatConnect](https://threatconnect.com/)** - Threat intelligence platform that combines intelligence analysis, automation, and response capabilities.
+- 🧑‍💻 **[Anomali](https://www.anomali.com/)** - Threat intelligence platform that integrates with existing security infrastructure to provide actionable intelligence.
+- 🔗 **[EclecticIQ](https://www.eclecticiq.com/)** - Threat intelligence platform that enables organizations to collect, analyze, and act on threat intelligence.
+- 🕵️ **[ThreatQuotient](https://www.threatq.com/)** - Threat intelligence platform that helps security teams prioritize and respond to threats more efficiently.
+- 📡 **[ThreatStream](https://www.anomali.com/products/threatstream)** - Anomali's threat intelligence platform that provides curated intelligence and automated threat response.
+- 🌐 **[ThreatConnect](https://threatconnect.com/)** - Threat intelligence platform that combines intelligence analysis, automation, and response capabilities.
+- 🧪 **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for gathering, sharing, storing, and correlating IOCs, indicators of compromise, and threat intelligence.
+- 🛡️ **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence knowledge and observables, built on STIX 2.1.
+- 🔎 **[TheHive Project](https://thehive-project.org/)** - Scalable, open-source, and free security incident response platform designed to make life easier for SOCs, CSIRTs, and CERTs.
+- 📊 **[Cortex](https://github.com/TheHive-Project/Cortex)** - A powerful observable analysis and active response engine that integrates with TheHive for automated threat intelligence enrichment.
+
+---
+
+# Endpoint Detection & Response (EDR)
+
+- 🛡️ **[Microsoft Defender for Endpoint](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-endpoint)** - Enterprise endpoint security platform providing threat detection, investigation, and response capabilities integrated with the Microsoft ecosystem.
+- 🔵 **[CrowdStrike Falcon](https://www.crowdstrike.com/)** - Cloud-native endpoint protection platform delivering real-time threat detection, intelligence, and response through a lightweight agent.
+- 🟠 **[SentinelOne](https://www.sentinelone.com/)** - Autonomous AI-powered endpoint protection platform offering detection, response, and remediation across endpoints, containers, and cloud workloads.
+- 🟣 **[Carbon Black](https://www.vmware.com/products/carbon-black-cloud.html)** - VMware's endpoint detection and response platform providing continuous monitoring, threat hunting, and incident response capabilities.
+- 🔴 **[Palo Alto Networks Cortex XDR](https://www.paloaltonetworks.com/cortex/cortex-xdr)** - Extended detection and response platform that integrates endpoint, network, and cloud data to detect and respond to threats.
+- 🟡 **[Cylance (BlackBerry)](https://www.blackberry.com/us/en/products/cylance-endpoint-security/cylance-isolation)** - AI-driven endpoint protection platform using machine learning to prevent malware and advanced threats.
+- 🟢 **[Sophos Intercept X](https://www.sophos.com/en-us/products/endpoint-antivirus)** - Endpoint protection platform with deep learning, anti-ransomware, and exploit prevention capabilities.
+- 🔵 **[Trend Micro Apex One](https://www.trendmicro.com/en_us/business/products/endpoint-security.html)** - Endpoint security solution providing automated detection, investigation, and response across the enterprise.
+- 🟠 **[McAfee MVISION Endpoint](https://www.mcafee.com/enterprise/en-us/products/mvision-endpoint.html)** - Endpoint security platform that combines EDR, threat intelligence, and automated response capabilities.
+- 🟣 **[Symantec Endpoint Security](https://www.broadcom.com/products/cybersecurity/endpoint)** - Comprehensive endpoint protection platform offering EDR, EPP, and threat intelligence integration.
+- 🔴 **[Kaspersky Endpoint Detection and Response](https://www.kaspersky.com/enterprise-security/endpoint-detection-and-response)** - EDR solution providing continuous monitoring, threat detection, and automated response for endpoints.
+- 🟡 **[Elastic Endpoint Security](https://www.elastic.co/endpoint-security)** - Open-source endpoint security solution built on the Elastic Stack, providing EDR, prevention, and response capabilities.
+- 🟢 **[Velociraptor](https://github.com/Velocidex/velociraptor)** - Open-source endpoint visibility and digital forensics platform for monitoring and responding to threats across large fleets of endpoints.
+- 🔵 **[Wazuh](https://wazuh.com/)** - Open-source security platform providing endpoint detection, SIEM, and incident response capabilities through a unified agent.
+- 🟠 **[OSSEC](https://www.ossec.net/)** - Open-source host-based intrusion detection system (HIDS) providing log analysis, file integrity monitoring, and active response.
+- 🟣 **[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)** - Windows system monitoring tool from Microsoft Sysinternals that logs detailed system activity for threat detection and forensics.
+- 🔴 **[OSQuery](https://osquery.io/)** - Open-source endpoint visibility tool that exposes operating system data as a relational database for monitoring and threat hunting.
+- 🟡 **[GRR Rapid Response](https://github.com/google/grr)** - Google's remote live forensics and incident response framework for large-scale endpoint monitoring and investigation.
+- 🟢 **[Falcon LogScale](https://www.crowdstrike.com/products/observability/falcon-logscale/)** - CrowdStrike's log management and analysis platform for endpoint telemetry and threat hunting.
+- 🔵 **[LimaCharlie](https://limacharlie.io/)** - Open-source EDR platform providing endpoint detection, response, and telemetry collection capabilities.
+- 🟠 **[Redline](https://www.fireeye.com/services/freeware/redline.html)** - Free endpoint forensic analysis tool from FireEye for investigating and hunting threats across Windows, Mac, and Linux endpoints.
+- 🟣 **[Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns)** - Microsoft Sysinternals tool for monitoring and managing Windows startup programs and persistence mechanisms.
+- 🔴 **[Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)** - Advanced Windows process monitoring tool for analyzing running processes, DLLs, and handles.
+- 🟡 **[Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)** - Real-time monitoring tool for Windows file system, registry, and process activity.
+- 🟢 **[TCPView](https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview)** - Windows tool for monitoring TCP and UDP endpoints and active connections.
+- 🔵 **[Windows Defender Application Control](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/wdac)** - Application control solution that restricts unauthorized applications and code execution on Windows endpoints.
+- 🟠 **[AppLocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview)** - Windows application control feature for restricting which applications and files users can run.
+- 🟣 **[Windows Firewall](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/)** - Built-in Windows host-based firewall for controlling network traffic to and from endpoints.
+- 🔴 **[PowerShell Constrained Language Mode](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_language_modes)** - Security feature that restricts PowerShell to a limited set of commands, reducing attack surface.
+- 🟡 **[AppArmor](https://apparmor.net/)** - Linux kernel security module for restricting program capabilities through per-program profiles.
+- 🟢 **[SELinux](https://selinuxproject.org/)** - Linux security module providing mandatory access control (MAC) to restrict processes and users.
+- 🔵 **[Firejail](https://firejail.wordpress.com/)** - Linux sandboxing tool for isolating applications and restricting their access to system resources.
+- 🟠 **[Bubblewrap](https://github.com/containers/bubblewrap)** - Unprivileged sandboxing tool used by Flatpak and other Linux applications for process isolation.
+- 🟣 **[Falco](https://falco.org/)** - Cloud-native runtime security tool for detecting anomalous activity in containers, Kubernetes, and Linux hosts.
+- 🔴 **[Tetragon](https://github.com/cilium/tetragon)** - eBPF-based security observability and runtime enforcement platform for Kubernetes and Linux.
+- 🟡 **[Sysdig](https://sysdig.com/)** - Container and cloud security platform providing runtime threat detection, compliance, and forensics.
+- 🟢 **[Tracee](https://github.com/aquasecurity/tracee)** - eBPF-based runtime security and forensics tool for Linux, providing deep system visibility.
+- 🔵 **[Kubescape](https://github.com/kubescape/kubescape)** - Kubernetes security platform providing risk analysis, compliance, and runtime detection.
+- 🟠 **[ClamAV](https://www.clamav.net/)** - Open-source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.
+- 🟣 **[YARA](https://github.com/VirusTotal/yara)** - Pattern-matching tool for identifying and classifying malware samples, widely used in EDR and malware analysis.
+- 🔴 **[Sigma](https://github.com/SigmaHQ/sigma)** - Generic signature format for SIEM and EDR systems, enabling detection rule sharing across platforms.
+- 🟡 **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)** - Rapid forensic artifact analysis tool for Windows event logs and other endpoint telemetry.
+- 🟢 **[Hayabusa](https://github.com/Yamato-Security/hayabusa)** - Windows event log analysis tool for threat hunting and incident response, providing fast and detailed timelines.
+- 🔵 **[APT-Hunter](https://github.com/ahmedkhlief/APT-Hunter)** - Threat hunting tool for Windows event logs, designed to detect APT activity and advanced threats.
+- 🟠 **[DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI)** - PowerShell module for threat hunting via Windows event log analysis.
+- 🟣 **[Event Log Explorer](https://eventlogxp.com/)** - Windows event log analysis tool for security monitoring, auditing, and forensic investigation.
+- 🔴 **[Log Parser Lizard](https://www.lizard-labs.com/log_parser_lizard.aspx)** - GUI tool for analyzing Windows event logs and other log sources using SQL-like queries.
+- 🟡 **[NXLog](https://nxlog.co/)** - Log collection and forwarding tool for centralized endpoint telemetry and SIEM integration.
+- 🟢 **[Fluent Bit](https://fluentbit.io/)** - Lightweight log and metrics processor for collecting and forwarding endpoint telemetry to SIEM and analytics platforms.
+- 🔵 **[Filebeat](https://www.elastic.co/beats/filebeat)** - Lightweight shipper for forwarding and centralizing log data from endpoints to Elasticsearch and Logstash.
+- 🟠 **[Winlogbeat](https://www.elastic.co/beats/winlogbeat)** - Elastic Beat for shipping Windows event logs to Elasticsearch for analysis and threat hunting.
+- 🟣 **[Auditbeat](https://www.elastic.co/beats/auditbeat)** - Elastic Beat for auditing Linux and Windows endpoint activity, including file integrity and process monitoring.
+- 🔴 **[Sysmon Modular](https://github.com/olafhartong/sysmon-modular)** - Community-driven Sysmon configuration repository for enhanced endpoint visibility and threat detection.
+- 🟡 **[SwiftOnSecurity Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config)** - Widely used Sysmon configuration for high-quality endpoint logging and threat detection.
+- 🟢 **[Olaf Hartong Sysmon Config](https://github.com/olafhartong/sysmon-modular)** - Comprehensive Sysmon configuration for advanced threat detection and hunting.
+- 🔵 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK for validating EDR and detection capabilities.
+- 🟠 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform for testing EDR and detection capabilities using MITRE ATT&CK.
+- 🟣 **[Infection Monkey](https://github.com/guardicore/monkey)** - Open-source breach and attack simulation tool for testing endpoint and network security controls.
+- 🔴 **[Prelude Operator](https://www.prelude.org/)** - Adversary emulation platform for testing and validating EDR and security controls.
+- 🟡 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises, adversary emulation, and detection validation.
+- 🟢 **[Artemis](https://github.com/CERT-Polska/Artemis)** - Modular vulnerability scanner and endpoint security assessment tool.
+- 🔵 **[Loki](https://github.com/Neo23x0/Loki)** - Free IOC scanner for detecting malware and indicators of compromise on endpoints.
+- 🟠 **[Thor](https://www.nextron-systems.com/thor/)** - Commercial IOC and YARA scanner for endpoint compromise assessment and threat hunting.
+- 🟣 **[Fenrir](https://github.com/Neo23x0/Fenrir)** - Simple IOC scanner for Linux and Unix-based systems.
+- 🔴 **[ClamAV](https://www.clamav.net/)** - Open-source antivirus engine for detecting trojans, viruses, malware, and other malicious threats.
+- 🟡 **[Rkhunter](http://rkhunter.sourceforge.net/)** - Rootkit hunter for Linux and Unix systems, scanning for rootkits, backdoors, and local exploits.
+- 🟢 **[Chkrootkit](http://www.chkrootkit.org/)** - Linux tool for detecting rootkits and other signs of compromise on endpoints.
+- 🔵 **[Lynis](https://cisofy.com/lynis/)** - Security auditing tool for Linux, macOS, and Unix-based systems, providing hardening and compliance assessments.
+- 🟠 **[OpenSCAP](https://www.open-scap.org/)** - Open-source security compliance and vulnerability assessment framework for endpoint hardening.
+- 🟣 **[CIS-CAT](https://www.cisecurity.org/cis-cat-pro)** - Configuration assessment tool for validating endpoint hardening against CIS Benchmarks.
+- 🔴 **[Microsoft Security Compliance Toolkit](https://learn.microsoft.com/en-us/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit)** - Microsoft's toolkit for assessing and managing Windows security configurations.
+- 🟡 **[HardeningKitty](https://github.com/0x6d69636b/windows_hardening)** - Windows hardening script and checklist for improving endpoint security posture.
+- 🟢 **[Windows Hardening Guide](https://github.com/0x6d69636b/windows_hardening)** - Comprehensive guide for hardening Windows endpoints against modern threats.
+
+---
+
+# Network Security & Monitoring
+
+- 🌐 **[Wireshark](https://www.wireshark.org/)** - The world's foremost network protocol analyzer, capturing and interactively browsing traffic on a live network or from a saved capture file.
+- 🕵️ **[tcpdump](https://www.tcpdump.org/)** - Powerful command-line packet analyzer for capturing and inspecting network traffic on Unix-like systems.
+- 🛡️ **[Snort](https://www.snort.org/)** - Open-source network intrusion detection and prevention system (IDS/IPS) capable of real-time traffic analysis and packet logging.
+- 🔵 **[Suricata](https://suricata.io/)** - High-performance open-source IDS, IPS, and network security monitoring engine supporting multi-threading and hardware acceleration.
+- 🟠 **[Zeek](https://zeek.org/)** - Powerful network analysis framework that transforms traffic into compact logs for security monitoring, forensics, and threat hunting.
+- 🟣 **[Security Onion](https://securityonionsolutions.com/)** - Free and open-source Linux distribution for threat hunting, enterprise security monitoring, and log management, bundling Zeek, Suricata, and more.
+- 🔴 **[Snort 3](https://www.snort.org/snort3)** - Next-generation Snort with improved performance, configuration, and detection capabilities.
+- 🟡 **[Bro/Zeek](https://docs.zeek.org/)** - Documentation and resources for Zeek, the network security monitor formerly known as Bro.
+- 🟢 **[Arkime](https://arkime.com/)** - Large-scale, open-source, indexed packet capture and search system for network traffic analysis and forensics.
+- 🔵 **[Moloch](https://github.com/aol/moloch)** - Former name of Arkime, an open-source large-scale IPv4 and IPv6 packet capture and indexing system.
+- 🟠 **[ntopng](https://www.ntop.org/products/traffic-analysis/ntop/)** - High-speed web-based traffic analysis and flow collection tool for monitoring network usage and detecting anomalies.
+- 🟣 **[ntop](https://www.ntop.org/)** - Suite of network traffic monitoring tools including ntopng, nProbe, and PF_RING.
+- 🔴 **[Nagios](https://www.nagios.org/)** - Widely used open-source monitoring system for network, server, and application monitoring with alerting capabilities.
+- 🟡 **[Zabbix](https://www.zabbix.com/)** - Enterprise-class open-source distributed monitoring solution for networks, servers, and applications.
+- 🟢 **[PRTG Network Monitor](https://www.paessler.com/prtg)** - Comprehensive network monitoring tool with sensors for bandwidth, availability, and performance monitoring.
+- 🔵 **[LibreNMS](https://www.librenms.org/)** - Open-source network monitoring system with auto-discovery, alerting, and support for a wide range of devices.
+- 🟠 **[Observium](https://www.observium.org/)** - Network monitoring platform with auto-discovery and support for SNMP-enabled devices.
+- 🟣 **[Cacti](https://www.cacti.net/)** - Open-source network monitoring and graphing solution using RRDTool for time-series data.
+- 🔴 **[Smokeping](https://oss.oetiker.ch/smokeping/)** - Latency and packet loss monitoring tool for detecting network performance issues.
+- 🟡 **[Munin](https://munin-monitoring.org/)** - Open-source networked resource monitoring tool for tracking system and network performance.
+- 🟢 **[Icinga](https://icinga.com/)** - Open-source monitoring system for networks, servers, and applications with a modern web interface.
+- 🔵 **[Prometheus](https://prometheus.io/)** - Open-source monitoring and alerting toolkit with a time-series database and powerful query language.
+- 🟠 **[Grafana](https://grafana.com/)** - Open-source analytics and visualization platform for monitoring metrics, logs, and traces from multiple sources.
+- 🟣 **[Netdata](https://www.netdata.cloud/)** - Real-time performance and health monitoring for systems, containers, and applications with per-second metrics.
+- 🔴 **[Checkmk](https://checkmk.com/)** - Comprehensive IT monitoring platform for networks, servers, applications, and cloud services.
+- 🟡 **[SolarWinds Network Performance Monitor](https://www.solarwinds.com/network-performance-monitor)** - Enterprise network monitoring solution with fault, availability, and performance management.
+- 🟢 **[PRTG](https://www.paessler.com/prtg)** - Network monitoring solution with sensors for bandwidth, availability, and performance.
+- 🔵 **[Wireshark](https://www.wireshark.org/)** - Network protocol analyzer for deep packet inspection and troubleshooting.
+- 🟠 **[NetworkMiner](https://www.netresec.com/?page=NetworkMiner)** - Network forensic analysis tool (NFAT) for reconstructing network sessions and extracting artifacts from PCAP files.
+- 🟣 **[Xplico](https://www.xplico.org/)** - Open-source network forensics analysis tool that reconstructs application data from captured traffic.
+- 🔴 **[Capinfos](https://www.wireshark.org/docs/man-pages/capinfos.html)** - Command-line tool for printing information about capture files, part of the Wireshark suite.
+- 🟡 **[Tshark](https://www.wireshark.org/docs/man-pages/tshark.html)** - Command-line version of Wireshark for capturing and analyzing network traffic.
+- 🟢 **[Dumpcap](https://www.wireshark.org/docs/man-pages/dumpcap.html)** - Command-line network traffic capture tool, part of the Wireshark suite.
+- 🔵 **[Editcap](https://www.wireshark.org/docs/man-pages/editcap.html)** - Command-line tool for editing and converting capture files, part of the Wireshark suite.
+- 🟠 **[Mergecap](https://www.wireshark.org/docs/man-pages/mergecap.html)** - Command-line tool for merging multiple capture files into one, part of the Wireshark suite.
+- 🟣 **[Tcpreplay](https://tcpreplay.appneta.com/)** - Suite of tools for replaying captured network traffic for testing and analysis.
+- 🔴 **[Scapy](https://scapy.net/)** - Powerful Python-based interactive packet manipulation program for crafting, sending, and analyzing network packets.
+- 🟡 **[hping3](https://github.com/antirez/hping)** - Command-line packet crafting and analysis tool for TCP/IP protocols.
+- 🟢 **[Nmap](https://nmap.org/)** - Network discovery and security auditing tool for scanning hosts, ports, and services.
+- 🔵 **[Masscan](https://github.com/robertdavidgraham/masscan)** - High-speed TCP port scanner capable of scanning the entire internet in under 6 minutes.
+- 🟠 **[Zmap](https://zmap.io/)** - Fast single-packet network scanner for internet-wide surveys and research.
+- 🟣 **[Netcat](https://netcat.sourceforge.net/)** - Versatile networking utility for reading and writing data across network connections.
+- 🔴 **[Ncat](https://nmap.org/ncat/)** - Nmap's modern reimplementation of Netcat with additional features like SSL support and connection brokering.
+- 🟡 **[Socat](http://www.dest-unreach.org/socat/)** - Multipurpose relay tool for bidirectional data transfer between network sockets and other data sources.
+- 🟢 **[hping](https://github.com/antirez/hping)** - Command-line-oriented TCP/IP packet assembler and analyzer.
+- 🔵 **[OpenVAS](https://github.com/greenbone/openvas-scanner)** - Open-source vulnerability scanner for network devices, servers, and applications.
+- 🟠 **[Nessus](https://www.tenable.com/products/nessus)** - Commercial vulnerability scanner for identifying network and system vulnerabilities.
+- 🟣 **[Qualys VMDR](https://www.qualys.com/apps/vulnerability-management-detection-response/)** - Cloud-based vulnerability management, detection, and response platform.
+- 🔴 **[Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/)** - Vulnerability management platform providing real-time visibility into network assets and risks.
+- 🟡 **[Tenable.sc](https://www.tenable.com/products/tenable-sc)** - On-premises vulnerability management platform for continuous network monitoring.
+- 🟢 **[Nexpose](https://www.rapid7.com/products/nexpose/)** - Vulnerability scanner for network devices, operating systems, and applications.
+- 🔵 **[OpenVAS](https://www.openvas.org/)** - Open-source vulnerability assessment system for network security scanning.
+- 🟠 **[Nikto](https://cirt.net/Nikto2)** - Web server scanner for detecting vulnerabilities, misconfigurations, and outdated software.
+- 🟣 **[Nuclei](https://github.com/projectdiscovery/nuclei)** - Fast and customizable vulnerability scanner based on simple YAML templates.
+- 🔴 **[Nmap Scripting Engine (NSE)](https://nmap.org/book/nse.html)** - Powerful scripting engine for automating network discovery and vulnerability detection.
+- 🟡 **[Vulners](https://vulners.com/)** - Vulnerability database and search engine for security researchers and network defenders.
+- 🟢 **[CVE](https://cve.mitre.org/)** - Common Vulnerabilities and Exposures database for identifying and tracking network vulnerabilities.
+- 🔵 **[NVD](https://nvd.nist.gov/)** - National Vulnerability Database providing vulnerability management data and analysis.
+- 🟠 **[Exploit-DB](https://www.exploit-db.com/)** - Archive of public exploits and proof-of-concept code for vulnerability research.
+- 🟣 **[Metasploit](https://www.metasploit.com/)** - Penetration testing framework with modules for network exploitation and post-exploitation.
+- 🔴 **[Armitage](https://github.com/rsmudge/armitage)** - GUI front-end for Metasploit for visualizing network attacks and defenses.
+- 🟡 **[Cobalt Strike](https://www.cobaltstrike.com/)** - Adversary simulation and red teaming platform for testing network defenses.
+- 🟢 **[Sliver](https://github.com/BishopFox/sliver)** - Open-source cross-platform adversary simulation framework for testing network security.
+- 🔵 **[Empire](https://github.com/BC-SECURITY/Empire)** - Post-exploitation framework for PowerShell and Python agents, useful for testing network defenses.
+- 🟠 **[Covenant](https://github.com/cobbr/Covenant)** - .NET-based command and control framework for adversary simulation.
+- 🟣 **[Mythic](https://github.com/its-a-feature/Mythic)** - Collaborative, multi-platform command and control framework for adversary simulation.
+- 🔴 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform for testing network and endpoint defenses.
+- 🟡 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK for validating network and endpoint defenses.
+- 🟢 **[Infection Monkey](https://github.com/guardicore/monkey)** - Open-source breach and attack simulation tool for testing network segmentation and endpoint defenses.
+- 🔵 **[Prelude Operator](https://www.prelude.org/)** - Adversary emulation platform for testing and validating network security controls.
+- 🟠 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises, adversary emulation, and detection validation.
+- 🟣 **[PcapXray](https://github.com/Srinivas11789/PcapXray)** - Network forensics tool for visualizing PCAP files and identifying malicious traffic.
+- 🔴 **[BruteShark](https://github.com/odedshimon/BruteShark)** - Network analysis tool for extracting and analyzing network traffic, including credentials and files.
+- 🟡 **[NetworkMiner](https://www.netresec.com/?page=NetworkMiner)** - Network forensic analysis tool for reconstructing network sessions and extracting artifacts.
+- 🟢 **[Xplico](https://www.xplico.org/)** - Network forensics analysis tool for reconstructing application data from captured traffic.
+- 🔵 **[CapAnalysis](https://www.capanalysis.net/)** - Web-based PCAP analysis tool for network forensics and traffic visualization.
+- 🟠 **[Snorby](https://github.com/Snorby/snorby)** - Web-based front-end for Snort IDS for network security monitoring.
+- 🟣 **[BASE](http://base.secureideas.net/)** - Basic Analysis and Security Engine for analyzing Snort alerts.
+- 🔴 **[Sguil](https://bammv.github.io/sguil/)** - Analyst console for network security monitoring, integrating Snort, Suricata, and other tools.
+- 🟡 **[Squit](https://github.com/bammv/squit)** - Web-based analysis console for Suricata and Snort alerts.
+- 🟢 **[ELSA](https://github.com/mcholste/elsa)** - Enterprise Log Search and Archive for centralized log management and network security monitoring.
+- 🔵 **[Prelude SIEM](https://www.prelude-siem.org/)** - Open-source SIEM for collecting, normalizing, and correlating security events from network devices.
+- 🟠 **[OSSIM](https://www.alienvault.com/products/ossim)** - Open-source SIEM with asset discovery, vulnerability assessment, and intrusion detection.
+- 🟣 **[Wazuh](https://wazuh.com/)** - Open-source security platform for threat detection, integrity monitoring, and incident response across networks and endpoints.
+- 🔴 **[Elastic Security](https://www.elastic.co/security)** - SIEM and endpoint security platform built on the Elastic Stack for network and endpoint monitoring.
+- 🟡 **[Splunk](https://www.splunk.com/)** - Industry-leading SIEM and log management platform for network security monitoring and threat detection.
+- 🟢 **[IBM QRadar](https://www.ibm.com/products/qradar-siem)** - Enterprise SIEM for network security monitoring, log analysis, and threat detection.
+- 🔵 **[LogRhythm](https://logrhythm.com/)** - SIEM platform for network security monitoring, threat detection, and incident response.
+- 🟠 **[ArcSight](https://www.microfocus.com/en-us/cyberres/security-operations/siem)** - Enterprise SIEM for network security monitoring and compliance.
+- 🟣 **[McAfee ESM](https://www.mcafee.com/enterprise/en-us/products/siem-products.html)** - Enterprise SIEM for network security monitoring and threat detection.
+- 🔴 **[AlienVault USM](https://www.alienvault.com/products/unified-security-management)** - Unified security management platform combining SIEM, IDS, and asset discovery.
+- 🟡 **[SolarWinds Security Event Manager](https://www.solarwinds.com/security-event-manager)** - SIEM solution for network security monitoring, log management, and compliance.
+- 🟢 **[Graylog](https://www.graylog.org/)** - Open-source log management platform for centralized network security monitoring and analysis.
+- 🔵 **[Fluentd](https://www.fluentd.org/)** - Open-source data collector for unified logging and network security monitoring.
+- 🟠 **[Logstash](https://www.elastic.co/logstash)** - Open-source data processing pipeline for collecting, transforming, and forwarding network logs.
+- 🟣 **[Filebeat](https://www.elastic.co/beats/filebeat)** - Lightweight shipper for forwarding and centralizing network logs to Elasticsearch and Logstash.
+- 🔴 **[Packetbeat](https://www.elastic.co/beats/packetbeat)** - Elastic Beat for monitoring network traffic and application performance.
+- 🟡 **[Heartbeat](https://www.elastic.co/beats/heartbeat)** - Elastic Beat for uptime monitoring of network services and hosts.
+- 🟢 **[Metricbeat](https://www.elastic.co/beats/metricbeat)** - Elastic Beat for collecting network and system metrics.
+- 🔵 **[Suricata-Update](https://suricata-update.readthedocs.io/)** - Tool for managing Suricata rulesets and updates.
+- 🟠 **[PulledPork](https://github.com/shirkdog/pulledpork)** - Tool for managing Snort rulesets and updates.
+- 🟣 **[Snort3](https://github.com/snort3/snort3)** - Next-generation Snort IDS/IPS with improved performance and detection.
+- 🔴 **[Zeek](https://github.com/zeek/zeek)** - Network analysis framework for security monitoring and forensics.
+- 🟡 **[RITA](https://www.activecountermeasures.com/free-tools/rita/)** - Real Intelligence Threat Analytics for detecting beaconing, DNS tunneling, and other network threats.
+- 🟢 **[AC-Hunter](https://www.activecountermeasures.com/ac-hunter/)** - Commercial version of RITA for enterprise network threat hunting.
+- 🔵 **[Beaconing Detection](https://github.com/activecm/rita)** - RITA's beaconing detection for identifying command and control traffic.
+- 🟠 **[DNS Tunneling Detection](https://github.com/activecm/rita)** - RITA's DNS tunneling detection for identifying data exfiltration.
+- 🟣 **[JA3](https://github.com/salesforce/ja3)** - TLS fingerprinting method for detecting malicious network traffic.
+- 🔴 **[JA3S](https://github.com/salesforce/ja3)** - TLS server fingerprinting method for network security monitoring.
+- 🟡 **[HASSH](https://github.com/salesforce/hassh)** - SSH fingerprinting method for detecting malicious SSH clients and servers.
+- 🟢 **[Zeek Intelligence Framework](https://docs.zeek.org/en/master/frameworks/intel.html)** - Framework for integrating threat intelligence into Zeek for network security monitoring.
+- 🔵 **[Snort Community Rules](https://www.snort.org/downloads/community/community-rules.tar.gz)** - Free community ruleset for Snort IDS/IPS.
+- 🟠 **[Suricata Emerging Threats Rules](https://rules.emergingthreats.net/)** - Emerging Threats ruleset for Suricata and Snort.
+- 🟣 **[ET Open Rules](https://rules.emergingthreats.net/open/)** - Open-source Emerging Threats ruleset for IDS/IPS.
+- 🔴 **[Snort VRT Rules](https://www.snort.org/downloads/registered/registered-rules.tar.gz)** - Registered ruleset for Snort with enhanced detection.
+- 🟡 **[Suricata Rules](https://suricata.io/)** - Official Suricata rules and documentation for network security monitoring.
+- 🟢 **[Zeek Scripts](https://github.com/zeek/zeek-scripts)** - Community-contributed Zeek scripts for enhanced network monitoring.
+- 🔵 **[Corelight](https://corelight.com/)** - Commercial Zeek-based network security monitoring platform.
+- 🟠 **[Darktrace](https://darktrace.com/)** - AI-powered network security monitoring and autonomous response platform.
+- 🟣 **[Vectra AI](https://www.vectra.ai/)** - AI-driven network detection and response platform for identifying hidden threats.
+- 🔴 **[ExtraHop](https://www.extrahop.com/)** - Network detection and response platform for real-time threat detection and investigation.
+- 🟡 **[Awake Security](https://awakesecurity.com/)** - Network detection and response platform using AI for threat hunting.
+- 🟢 **[IronNet](https://www.ironnet.com/)** - Collective defense platform for network security monitoring and threat detection.
+- 🔵 **[Gigamon](https://www.gigamon.com/)** - Network visibility and traffic monitoring platform for security and performance.
+- 🟠 **[Ixia (Keysight)](https://www.keysight.com/us/en/products/network-test/network-visibility.html)** - Network visibility and monitoring solutions for security and performance.
+- 🟣 **[NetFlow](https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html)** - Cisco's network flow monitoring protocol for traffic analysis and security monitoring.
+- 🔴 **[sFlow](https://sflow.org/)** - Industry-standard network flow monitoring protocol for traffic analysis.
+- 🟡 **[IPFIX](https://www.ietf.org/rfc/rfc7011.txt)** - IP Flow Information Export standard for network flow monitoring.
+- 🟢 **[JFlow](https://www.juniper.net/documentation/us/en/software/junos/flow-monitoring/topics/concept/jflow-overview.html)** - Juniper's network flow monitoring protocol.
+- 🔵 **[Netstream](https://support.huawei.com/enterprise/en/doc/EDOC1000178563)** - Huawei's network flow monitoring protocol.
+- 🟠 **[nProbe](https://www.ntop.org/products/netflow/nprobe/)** - NetFlow/IPFIX probe for network flow monitoring and analysis.
+- 🟣 **[Flow-tools](https://github.com/robcowart/flow-tools)** - Suite of tools for collecting, processing, and analyzing NetFlow data.
+- 🔴 **[SiLK](https://tools.netsa.cert.org/silk/)** - Suite of tools for collecting, storing, and analyzing NetFlow data for network security.
+- 🟡 **[Argus](https://openargus.org/)** - Network flow monitoring and analysis tool for security and performance.
+- 🟢 **[YAF](https://tools.netsa.cert.org/yaf/)** - Yet Another Flowmeter for capturing and processing network flow data.
+- 🔵 **[FlowBAT](https://github.com/FlowBAT/FlowBAT)** - Graphical analysis tool for NetFlow and IPFIX data.
+- 🟠 **[Elasticsearch](https://www.elastic.co/elasticsearch/)** - Distributed search and analytics engine for network security monitoring and log analysis.
+- 🟣 **[Kibana](https://www.elastic.co/kibana/)** - Visualization and exploration platform for Elasticsearch, used for network security dashboards.
+- 🔴 **[Grafana](https://grafana.com/)** - Open-source analytics and visualization platform for network monitoring metrics and logs.
+- 🟡 **[Prometheus](https://prometheus.io/)** - Monitoring and alerting toolkit for network and system metrics.
+- 🟢 **[Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)** - Alert management for Prometheus, handling alerts from network monitoring.
+- 🔵 **[Thanos](https://thanos.io/)** - Highly available Prometheus setup with long-term storage for network monitoring metrics.
+- 🟠 **[VictoriaMetrics](https://victoriametrics.com/)** - Fast, cost-effective time-series database for network monitoring metrics.
+- 🟣 **[InfluxDB](https://www.influxdata.com/)** - Time-series database for network monitoring metrics and events.
+- 🔴 **[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/)** - Plugin-driven server agent for collecting network and system metrics.
+- 🟡 **[Kapacitor](https://www.influxdata.com/time-series-platform/kapacitor/)** - Real-time streaming and processing engine for InfluxDB, used for network alerting.
+- 🟢 **[Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)** - Visualization and monitoring tool for InfluxDB and Kapacitor.
+- 🔵 **[Netdata](https://www.netdata.cloud/)** - Real-time performance and health monitoring for networks, systems, and applications.
+- 🟠 **[Zabbix](https://www.zabbix.com/)** - Enterprise-class open-source distributed monitoring solution for networks and applications.
+- 🟣 **[Nagios](https://www.nagios.org/)** - Widely used open-source monitoring system for network, server, and application monitoring.
+- 🔴 **[Icinga](https://icinga.com/)** - Open-source monitoring system for networks, servers, and applications.
+- 🟡 **[LibreNMS](https://www.librenms.org/)** - Open-source network monitoring system with auto-discovery and alerting.
+- 🟢 **[Observium](https://www.observium.org/)** - Network monitoring platform with auto-discovery and SNMP support.
+- 🔵 **[Cacti](https://www.cacti.net/)** - Open-source network monitoring and graphing solution.
+- 🟠 **[Smokeping](https://oss.oetiker.ch/smokeping/)** - Latency and packet loss monitoring tool for network performance.
+- 🟣 **[Munin](https://munin-monitoring.org/)** - Open-source networked resource monitoring tool.
+- 🔴 **[Checkmk](https://checkmk.com/)** - Comprehensive IT monitoring platform for networks, servers, and applications.
+- 🟡 **[PRTG](https://www.paessler.com/prtg)** - Network monitoring solution with sensors for bandwidth, availability, and performance.
+- 🟢 **[SolarWinds NPM](https://www.solarwinds.com/network-performance-monitor)** - Enterprise network monitoring solution with fault and performance management.
+- 🔵 **[ManageEngine OpManager](https://www.manageengine.com/network-monitoring/)** - Network monitoring software for bandwidth, performance, and fault management.
+- 🟠 **[WhatsUp Gold](https://www.ipswitch.com/network-management-software/whatsup-gold)** - Network monitoring and management software for availability and performance.
+- 🟣 **[Paessler PRTG](https://www.paessler.com/prtg)** - Network monitoring tool with sensors for bandwidth, availability, and performance.
+- 🔴 **[Auvik](https://www.auvik.com/)** - Cloud-based network monitoring and management platform for MSPs and IT teams.
+- 🟡 **[Datadog Network Monitoring](https://www.datadoghq.com/product/network-monitoring/)** - Cloud-based network monitoring and performance platform.
+- 🟢 **[Dynatrace](https://www.dynatrace.com/)** - AI-powered network and application monitoring platform.
+- 🔵 **[New Relic](https://newrelic.com/)** - Cloud-based observability platform for network and application monitoring.
+- 🟠 **[AppDynamics](https://www.appdynamics.com/)** - Application and network performance monitoring platform.
+- 🟣 **[LogicMonitor](https://www.logicmonitor.com/)** - Cloud-based infrastructure and network monitoring platform.
+- 🔴 **[ScienceLogic](https://sciencelogic.com/)** - AIOps and network monitoring platform for hybrid IT environments.
+- 🟡 **[Kentik](https://www.kentik.com/)** - Network observability and analytics platform for traffic monitoring and security.
+- 🟢 **[ThousandEyes](https://www.thousandeyes.com/)** - Network intelligence and digital experience monitoring platform.
+- 🔵 **[Cisco ThousandEyes](https://www.thousandeyes.com/)** - Network intelligence platform for monitoring internet and cloud performance.
+- 🟠 **[NetBrain](https://www.netbraintech.com/)** - Network automation and visibility platform for monitoring and troubleshooting.
+- 🟣 **[Forward Networks](https://www.forwardnetworks.com/)** - Network digital twin platform for visibility, verification, and security.
+- 🔴 **[Batfish](https://github.com/batfish/batfish)** - Network configuration analysis tool for verifying security and correctness.
+- 🟡 **[Nornir](https://github.com/nornir-automation/nornir)** - Automation framework for network device management and monitoring.
+- 🟢 **[Netmiko](https://github.com/ktbyers/netmiko)** - Multi-vendor library for SSH connections to network devices for automation and monitoring.
+- 🔵 **[NAPALM](https://github.com/napalm-automation/napalm)** - Multi-vendor library for network automation and monitoring.
+- 🟠 **[Ansible](https://www.ansible.com/)** - Automation platform for network device configuration and management.
+- 🟣 **[SaltStack](https://saltproject.io/)** - Automation and configuration management for network devices.
+- 🔴 **[Puppet](https://puppet.com/)** - Configuration management for network devices and servers.
+- 🟡 **[Chef](https://www.chef.io/)** - Configuration management for network devices and servers.
+- 🟢 **[Terraform](https://www.terraform.io/)** - Infrastructure as code for network and cloud resource management.
+- 🔵 **[NetBox](https://netbox.dev/)** - IP address management (IPAM) and data center infrastructure management (DCIM) tool for network documentation.
+- 🟠 **[phpIPAM](https://phpipam.net/)** - Open-source IP address management for network documentation and monitoring.
+- 🟣 **[NIPAP](https://github.com/SpriteLink/NIPAP)** - Open-source IP address management system for network planning.
+- 🔴 **[RackTables](https://racktables.org/)** - Data center and network documentation tool for asset management.
+- 🟡 **[GLPI](https://glpi-project.org/)** - IT asset management and helpdesk software with network inventory.
+- 🟢 **[OCS Inventory](https://ocsinventory-ng.org/)** - Open-source IT asset management and network inventory.
+- 🔵 **[Lansweeper](https://www.lansweeper.com/)** - IT asset management and network discovery platform.
+- 🟠 **[Device42](https://www.device42.com/)** - IT asset management and network documentation platform.
+- 🟣 **[Netdisco](https://netdisco.org/)** - Open-source network management tool for device discovery and inventory.
+- 🔴 **[RANCID](https://www.shrubbery.net/rancid/)** - Really Awesome New Cisco confIg Differ for network device configuration backup and monitoring.
+- 🟡 **[Oxidized](https://github.com/ytti/oxidized)** - Network device configuration backup tool with support for multiple vendors.
+- 🟢 **[Unimus](https://unimus.net/)** - Network device configuration backup and management tool.
+- 🔵 **[SolarWinds NCM](https://www.solarwinds.com/network-configuration-manager)** - Network configuration management and backup tool.
+- 🟠 **[ManageEngine Network Configuration Manager](https://www.manageengine.com/network-configuration-manager/)** - Network configuration management and compliance tool.
+- 🟣 **[FireMon](https://www.firemon.com/)** - Security policy management and network security monitoring platform.
+- 🔴 **[AlgoSec](https://www.algosec.com/)** - Security policy management and network security monitoring platform.
+- 🟡 **[Tufin](https://www.tufin.com/)** - Security policy orchestration and network security monitoring platform.
+- 🟢 **[Skybox Security](https://www.skyboxsecurity.com/)** - Security posture management and network security monitoring platform.
+- 🔵 **[RedSeal](https://www.redseal.net/)** - Network security modeling and monitoring platform.
+- 🟠 **[Firewall Analyzer](https://www.manageengine.com/firewall-analyzer/)** - Firewall log analysis and network security monitoring tool.
+- 🟣 **[Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html)** - SIEM for network security monitoring and threat detection.
+- 🔴 **[IBM QRadar SIEM](https://www.ibm.com/products/qradar-siem)** - Enterprise SIEM for network security monitoring and threat detection.
+- 🟡 **[LogRhythm SIEM](https://logrhythm.com/)** - SIEM platform for network security monitoring and incident response.
+- 🟢 **[ArcSight ESM](https://www.microfocus.com/en-us/cyberres/security-operations/siem)** - Enterprise SIEM for network security monitoring and compliance.
+- 🔵 **[McAfee ESM](https://www.mcafee.com/enterprise/en-us/products/siem-products.html)** - Enterprise SIEM for network security monitoring and threat detection.
+- 🟠 **[AlienVault USM](https://www.alienvault.com/products/unified-security-management)** - Unified security management platform combining SIEM, IDS, and asset discovery.
+- 🟣 **[SolarWinds SEM](https://www.solarwinds.com/security-event-manager)** - SIEM solution for network security monitoring, log management, and compliance.
+- 🔴 **[Graylog](https://www.graylog.org/)** - Open-source log management platform for centralized network security monitoring.
+- 🟡 **[Elastic Security](https://www.elastic.co/security)** - SIEM and endpoint security platform built on the Elastic Stack.
+- 🟢 **[Wazuh](https://wazuh.com/)** - Open-source security platform for threat detection, integrity monitoring, and incident response.
+- 🔵 **[OSSIM](https://www.alienvault.com/products/ossim)** - Open-source SIEM with asset discovery, vulnerability assessment, and intrusion detection.
+- 🟠 **[Prelude SIEM](https://www.prelude-siem.org/)** - Open-source SIEM for collecting, normalizing, and correlating security events.
+- 🟣 **[Security Onion](https://securityonionsolutions.com/)** - Free and open-source Linux distribution for threat hunting, enterprise security monitoring, and log management.
+- 🔴 **[SELKS](https://www.stamus-networks.com/open-source)** - Suricata-based IDS/IPS platform with Elasticsearch, Logstash, Kibana, and Scirius.
+- 🟡 **[RockNSM](https://rocknsm.io/)** - Open-source network security monitoring platform for threat hunting and incident response.
+- 🟢 **[Apache Metron](https://metron.apache.org/)** - Open-source security analytics platform for network security monitoring.
+- 🔵 **[Apache Spot](https://spot.apache.org/)** - Open-source network security analytics platform for threat detection.
+- 🟠 **[Snort](https://www.snort.org/)** - Open-source network intrusion detection and prevention system.
+- 🟣 **[Suricata](https://suricata.io/)** - High-performance open-source IDS, IPS, and network security monitoring engine.
+- 🔴 **[Zeek](https://zeek.org/)** - Powerful network analysis framework for security monitoring and forensics.
+- 🟡 **[Bro](https://www.bro.org/)** - Former name of Zeek, a network security monitor.
+- 🟢 **[Snorby](https://github.com/Snorby/snorby)** - Web-based front-end for Snort IDS for network security monitoring.
+- 🔵 **[BASE](http://base.secureideas.net/)** - Basic Analysis and Security Engine for analyzing Snort alerts.
+- 🟠 **[Sguil](https://bammv.github.io/sguil/)** - Analyst console for network security monitoring.
+- 🟣 **[Squit](https://github.com/bammv/squit)** - Web-based analysis console for Suricata and Snort alerts.
+- 🔴 **[ELSA](https://github.com/mcholste/elsa)** - Enterprise Log Search and Archive for centralized log management.
+- 🟡 **[RITA](https://www.activecountermeasures.com/free-tools/rita/)** - Real Intelligence Threat Analytics for detecting beaconing and DNS tunneling.
+- 🟢 **[AC-Hunter](https://www.activecountermeasures.com/ac-hunter/)** - Commercial version of RITA for enterprise network threat hunting.
+- 🔵 **[JA3](https://github.com/salesforce/ja3)** - TLS fingerprinting method for detecting malicious network traffic.
+- 🟠 **[JA3S](https://github.com/salesforce/ja3)** - TLS server fingerprinting method for network security monitoring.
+- 🟣 **[HASSH](https://github.com/salesforce/hassh)** - SSH fingerprinting method for detecting malicious SSH clients and servers.
+- 🔴 **[Zeek Intelligence Framework](https://docs.zeek.org/en/master/frameworks/intel.html)** - Framework for integrating threat intelligence into Zeek.
+- 🟡 **[Snort Community Rules](https://www.snort.org/downloads/community/community-rules.tar.gz)** - Free community ruleset for Snort IDS/IPS.
+- 🟢 **[Suricata Emerging Threats Rules](https://rules.emergingthreats.net/)** - Emerging Threats ruleset for Suricata and Snort.
+- 🔵 **[ET Open Rules](https://rules.emergingthreats.net/open/)** - Open-source Emerging Threats ruleset for IDS/IPS.
+- 🟠 **[Snort VRT Rules](https://www.snort.org/downloads/registered/registered-rules.tar.gz)** - Registered ruleset for Snort with enhanced detection.
+- 🟣 **[Suricata Rules](https://suricata.io/)** - Official Suricata rules and documentation.
+- 🔴 **[Zeek Scripts](https://github.com/zeek/zeek-scripts)** - Community-contributed Zeek scripts for enhanced network monitoring.
+- 🟡 **[Corelight](https://corelight.com/)** - Commercial Zeek-based network security monitoring platform.
+- 🟢 **[Darktrace](https://darktrace.com/)** - AI-powered network security monitoring and autonomous response platform.
+- 🔵 **[Vectra AI](https://www.vectra.ai/)** - AI-driven network detection and response platform.
+- 🟠 **[ExtraHop](https://www.extrahop.com/)** - Network detection and response platform for real-time threat detection.
+- 🟣 **[Awake Security](https://awakesecurity.com/)** - Network detection and response platform using AI for threat hunting.
+- 🔴 **[IronNet](https://www.ironnet.com/)** - Collective defense platform for network security monitoring.
+- 🟡 **[Gigamon](https://www.gigamon.com/)** - Network visibility and traffic monitoring platform.
+- 🟢 **[Ixia (Keysight)](https://www.keysight.com/us/en/products/network-test/network-visibility.html)** - Network visibility and monitoring solutions.
+- 🔵 **[NetFlow](https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html)** - Cisco's network flow monitoring protocol.
+- 🟠 **[sFlow](https://sflow.org/)** - Industry-standard network flow monitoring protocol.
+- 🟣 **[IPFIX](https://www.ietf.org/rfc/rfc7011.txt)** - IP Flow Information Export standard.
+- 🔴 **[JFlow](https://www.juniper.net/documentation/us/en/software/junos/flow-monitoring/topics/concept/jflow-overview.html)** - Juniper's network flow monitoring protocol.
+- 🟡 **[Netstream](https://support.huawei.com/enterprise/en/doc/EDOC1000178563)** - Huawei's network flow monitoring protocol.
+- 🟢 **[nProbe](https://www.ntop.org/products/netflow/nprobe/)** - NetFlow/IPFIX probe for network flow monitoring.
+- 🔵 **[Flow-tools](https://github.com/robcowart/flow-tools)** - Suite of tools for collecting, processing, and analyzing NetFlow data.
+- 🟠 **[SiLK](https://tools.netsa.cert.org/silk/)** - Suite of tools for collecting, storing, and analyzing NetFlow data.
+- 🟣 **[Argus](https://openargus.org/)** - Network flow monitoring and analysis tool.
+- 🔴 **[YAF](https://tools.netsa.cert.org/yaf/)** - Yet Another Flowmeter for capturing and processing network flow data.
+- 🟡 **[FlowBAT](https://github.com/FlowBAT/FlowBAT)** - Graphical analysis tool for NetFlow and IPFIX data.
+
+---
+
+# SIEM & Log Analysis
+
+- 🟡 **[Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html)** - Industry-leading SIEM platform for collecting, indexing, and analyzing machine data to detect threats, investigate incidents, and maintain compliance.
+- 🔵 **[IBM QRadar SIEM](https://www.ibm.com/products/qradar-siem)** - Enterprise SIEM platform that consolidates log events, network flows, and threat intelligence to provide real-time visibility and prioritized offense detection.
+- 🟠 **[Microsoft Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel)** - Cloud-native SIEM and SOAR solution built on Azure, providing intelligent security analytics, threat intelligence, and automated response across the enterprise.
+- 🟣 **[Elastic Security](https://www.elastic.co/security)** - SIEM and endpoint security platform built on the Elastic Stack, offering log ingestion, detection rules, and threat hunting capabilities.
+- 🔴 **[Wazuh](https://wazuh.com/)** - Open-source security platform providing SIEM, log analysis, file integrity monitoring, and incident response through a unified agent.
+- 🟢 **[LogRhythm](https://logrhythm.com/)** - SIEM platform combining log management, security analytics, and automated response for threat detection and compliance.
+- 🟡 **[ArcSight ESM](https://www.microfocus.com/en-us/cyberres/security-operations/siem)** - Enterprise SIEM from Micro Focus for collecting, correlating, and analyzing security events across the enterprise.
+- 🔵 **[McAfee ESM](https://www.mcafee.com/enterprise/en-us/products/siem-products.html)** - Enterprise SIEM solution for network security monitoring, log analysis, and threat detection.
+- 🟠 **[AlienVault USM](https://www.alienvault.com/products/unified-security-management)** - Unified security management platform combining SIEM, IDS, asset discovery, and vulnerability assessment.
+- 🟣 **[SolarWinds Security Event Manager](https://www.solarwinds.com/security-event-manager)** - SIEM solution for log management, network security monitoring, and compliance reporting.
+- 🔴 **[Graylog](https://www.graylog.org/)** - Open-source log management platform for centralized log collection, search, and analysis with alerting capabilities.
+- 🟢 **[OSSIM](https://www.alienvault.com/products/ossim)** - Open-source SIEM with asset discovery, vulnerability assessment, intrusion detection, and log correlation.
+- 🟡 **[Prelude SIEM](https://www.prelude-siem.org/)** - Open-source SIEM for collecting, normalizing, and correlating security events from multiple sources.
+- 🔵 **[Security Onion](https://securityonionsolutions.com/)** - Free and open-source Linux distribution for threat hunting, enterprise security monitoring, and log management, bundling Zeek, Suricata, and Elastic Stack.
+- 🟠 **[SELKS](https://www.stamus-networks.com/open-source)** - Suricata-based IDS/IPS platform with Elasticsearch, Logstash, Kibana, and Scirius for network security monitoring.
+- 🟣 **[RockNSM](https://rocknsm.io/)** - Open-source network security monitoring platform for threat hunting and incident response.
+- 🔴 **[Apache Metron](https://metron.apache.org/)** - Open-source security analytics platform for network security monitoring and threat detection.
+- 🟢 **[Apache Spot](https://spot.apache.org/)** - Open-source network security analytics platform for threat detection and log analysis.
+- 🟡 **[Snort](https://www.snort.org/)** - Open-source network intrusion detection and prevention system with logging and alerting capabilities.
+- 🔵 **[Suricata](https://suricata.io/)** - High-performance open-source IDS, IPS, and network security monitoring engine with detailed logging.
+- 🟠 **[Zeek](https://zeek.org/)** - Powerful network analysis framework that transforms traffic into compact logs for security monitoring and forensics.
+- 🟣 **[Snorby](https://github.com/Snorby/snorby)** - Web-based front-end for Snort IDS for network security monitoring and alert analysis.
+- 🔴 **[BASE](http://base.secureideas.net/)** - Basic Analysis and Security Engine for analyzing Snort alerts and logs.
+- 🟢 **[Sguil](https://bammv.github.io/sguil/)** - Analyst console for network security monitoring, integrating Snort, Suricata, and other tools.
+- 🟡 **[Squit](https://github.com/bammv/squit)** - Web-based analysis console for Suricata and Snort alerts.
+- 🔵 **[ELSA](https://github.com/mcholste/elsa)** - Enterprise Log Search and Archive for centralized log management and network security monitoring.
+- 🟠 **[RITA](https://www.activecountermeasures.com/free-tools/rita/)** - Real Intelligence Threat Analytics for detecting beaconing, DNS tunneling, and other network threats through log analysis.
+- 🟣 **[AC-Hunter](https://www.activecountermeasures.com/ac-hunter/)** - Commercial version of RITA for enterprise network threat hunting and log analysis.
+- 🔴 **[JA3](https://github.com/salesforce/ja3)** - TLS fingerprinting method for detecting malicious network traffic through log analysis.
+- 🟢 **[JA3S](https://github.com/salesforce/ja3)** - TLS server fingerprinting method for network security monitoring and log correlation.
+- 🟡 **[HASSH](https://github.com/salesforce/hassh)** - SSH fingerprinting method for detecting malicious SSH clients and servers through log analysis.
+- 🔵 **[Zeek Intelligence Framework](https://docs.zeek.org/en/master/frameworks/intel.html)** - Framework for integrating threat intelligence into Zeek for enhanced log analysis.
+- 🟠 **[Snort Community Rules](https://www.snort.org/downloads/community/community-rules.tar.gz)** - Free community ruleset for Snort IDS/IPS with logging capabilities.
+- 🟣 **[Suricata Emerging Threats Rules](https://rules.emergingthreats.net/)** - Emerging Threats ruleset for Suricata and Snort for enhanced detection and logging.
+- 🔴 **[ET Open Rules](https://rules.emergingthreats.net/open/)** - Open-source Emerging Threats ruleset for IDS/IPS with detailed logging.
+- 🟢 **[Snort VRT Rules](https://www.snort.org/downloads/registered/registered-rules.tar.gz)** - Registered ruleset for Snort with enhanced detection and logging.
+- 🟡 **[Suricata Rules](https://suricata.io/)** - Official Suricata rules and documentation for network security monitoring and log analysis.
+- 🔵 **[Zeek Scripts](https://github.com/zeek/zeek-scripts)** - Community-contributed Zeek scripts for enhanced network monitoring and log generation.
+- 🟠 **[Corelight](https://corelight.com/)** - Commercial Zeek-based network security monitoring platform with advanced log analysis.
+- 🟣 **[Darktrace](https://darktrace.com/)** - AI-powered network security monitoring and autonomous response platform with log analysis capabilities.
+- 🔴 **[Vectra AI](https://www.vectra.ai/)** - AI-driven network detection and response platform for identifying hidden threats through log analysis.
+- 🟢 **[ExtraHop](https://www.extrahop.com/)** - Network detection and response platform for real-time threat detection and log analysis.
+- 🟡 **[Awake Security](https://awakesecurity.com/)** - Network detection and response platform using AI for threat hunting and log analysis.
+- 🔵 **[IronNet](https://www.ironnet.com/)** - Collective defense platform for network security monitoring and log analysis.
+- 🟠 **[Gigamon](https://www.gigamon.com/)** - Network visibility and traffic monitoring platform for security and performance log analysis.
+- 🟣 **[Ixia (Keysight)](https://www.keysight.com/us/en/products/network-test/network-visibility.html)** - Network visibility and monitoring solutions for security and performance log analysis.
+- 🔴 **[NetFlow](https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-netflow/index.html)** - Cisco's network flow monitoring protocol for traffic analysis and security logging.
+- 🟢 **[sFlow](https://sflow.org/)** - Industry-standard network flow monitoring protocol for traffic analysis and logging.
+- 🟡 **[IPFIX](https://www.ietf.org/rfc/rfc7011.txt)** - IP Flow Information Export standard for network flow monitoring and logging.
+- 🔵 **[JFlow](https://www.juniper.net/documentation/us/en/software/junos/flow-monitoring/topics/concept/jflow-overview.html)** - Juniper's network flow monitoring protocol for traffic analysis and logging.
+- 🟠 **[Netstream](https://support.huawei.com/enterprise/en/doc/EDOC1000178563)** - Huawei's network flow monitoring protocol for traffic analysis and logging.
+- 🟣 **[nProbe](https://www.ntop.org/products/netflow/nprobe/)** - NetFlow/IPFIX probe for network flow monitoring and analysis.
+- 🔴 **[Flow-tools](https://github.com/robcowart/flow-tools)** - Suite of tools for collecting, processing, and analyzing NetFlow data.
+- 🟢 **[SiLK](https://tools.netsa.cert.org/silk/)** - Suite of tools for collecting, storing, and analyzing NetFlow data for network security.
+- 🟡 **[Argus](https://openargus.org/)** - Network flow monitoring and analysis tool for security and performance logging.
+- 🔵 **[YAF](https://tools.netsa.cert.org/yaf/)** - Yet Another Flowmeter for capturing and processing network flow data.
+- 🟠 **[FlowBAT](https://github.com/FlowBAT/FlowBAT)** - Graphical analysis tool for NetFlow and IPFIX data.
+- 🟣 **[Elasticsearch](https://www.elastic.co/elasticsearch/)** - Distributed search and analytics engine for log storage, search, and analysis.
+- 🔴 **[Kibana](https://www.elastic.co/kibana/)** - Visualization and exploration platform for Elasticsearch, used for log analysis dashboards.
+- 🟢 **[Logstash](https://www.elastic.co/logstash)** - Open-source data processing pipeline for collecting, transforming, and forwarding logs.
+- 🟡 **[Filebeat](https://www.elastic.co/beats/filebeat)** - Lightweight shipper for forwarding and centralizing log data to Elasticsearch and Logstash.
+- 🔵 **[Winlogbeat](https://www.elastic.co/beats/winlogbeat)** - Elastic Beat for shipping Windows event logs to Elasticsearch for analysis.
+- 🟠 **[Auditbeat](https://www.elastic.co/beats/auditbeat)** - Elastic Beat for auditing Linux and Windows endpoint activity and log collection.
+- 🟣 **[Packetbeat](https://www.elastic.co/beats/packetbeat)** - Elastic Beat for monitoring network traffic and application performance logs.
+- 🔴 **[Heartbeat](https://www.elastic.co/beats/heartbeat)** - Elastic Beat for uptime monitoring of network services and hosts.
+- 🟢 **[Metricbeat](https://www.elastic.co/beats/metricbeat)** - Elastic Beat for collecting network and system metrics.
+- 🟡 **[Fluentd](https://www.fluentd.org/)** - Open-source data collector for unified logging and log analysis.
+- 🔵 **[Fluent Bit](https://fluentbit.io/)** - Lightweight log and metrics processor for collecting and forwarding logs to SIEM and analytics platforms.
+- 🟠 **[NXLog](https://nxlog.co/)** - Log collection and forwarding tool for centralized log management and SIEM integration.
+- 🟣 **[Rsyslog](https://www.rsyslog.com/)** - Open-source syslog daemon for high-performance log processing and forwarding.
+- 🔴 **[Syslog-ng](https://www.syslog-ng.com/)** - Open-source syslog implementation for log collection, processing, and forwarding.
+- 🟢 **[Graylog](https://www.graylog.org/)** - Open-source log management platform for centralized log collection, search, and analysis.
+- 🟡 **[LogDNA](https://www.logdna.com/)** - Cloud-based log management platform for centralized log analysis and monitoring.
+- 🔵 **[Papertrail](https://www.papertrail.com/)** - Cloud-based log management service for centralized log aggregation and search.
+- 🟠 **[Datadog Log Management](https://www.datadoghq.com/product/log-management/)** - Cloud-based log management and analysis platform with SIEM capabilities.
+- 🟣 **[Sumo Logic](https://www.sumologic.com/)** - Cloud-native SIEM and log analytics platform for security monitoring and compliance.
+- 🔴 **[Humio](https://www.humio.com/)** - Log management and SIEM platform designed for high-speed ingestion and real-time analysis.
+- 🟢 **[CrowdStrike Falcon LogScale](https://www.crowdstrike.com/products/observability/falcon-logscale/)** - Log management and analysis platform for security telemetry and threat hunting.
+- 🟡 **[Panther](https://panther.com/)** - Cloud-native SIEM platform for log analysis, detection, and response.
+- 🔵 **[Securonix](https://www.securonix.com/)** - Cloud-native SIEM and UEBA platform for advanced threat detection and response.
+- 🟠 **[Exabeam](https://www.exabeam.com/)** - SIEM and UEBA platform for threat detection, investigation, and response.
+- 🟣 **[Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/)** - Cloud-based SIEM and XDR platform for threat detection and response.
+- 🔴 **[Splunk Cloud](https://www.splunk.com/en_us/products/splunk-cloud-platform.html)** - Cloud-based Splunk platform for SIEM, log analysis, and security monitoring.
+- 🟢 **[Splunk Enterprise](https://www.splunk.com/en_us/products/splunk-enterprise.html)** - On-premises Splunk platform for SIEM, log analysis, and security monitoring.
+- 🟡 **[Splunk Phantom](https://www.splunk.com/en_us/products/phantom.html)** - SOAR platform for security automation, orchestration, and response.
+- 🔵 **[Splunk SOAR](https://www.splunk.com/en_us/products/splunk-soar.html)** - Security orchestration, automation, and response platform for automating security workflows.
+- 🟠 **[IBM Resilient](https://www.ibm.com/products/resilient)** - SOAR platform for incident response and security automation.
+- 🟣 **[Palo Alto Networks Cortex XSOAR](https://www.paloaltonetworks.com/cortex/cortex-xsoar)** - SOAR platform for security automation, orchestration, and incident response.
+- 🔴 **[TheHive Project](https://thehive-project.org/)** - Scalable, open-source security incident response platform for SOCs, CSIRTs, and CERTs.
+- 🟢 **[Cortex](https://github.com/TheHive-Project/Cortex)** - Observable analysis and active response engine that integrates with TheHive for automated threat intelligence enrichment.
+- 🟡 **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for gathering, sharing, and correlating IOCs and threat intelligence.
+- 🔵 **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence knowledge and observables, built on STIX 2.1.
+- 🟠 **[Yeti](https://yeti-platform.github.io/)** - Platform for organizing threat intelligence data, including observables, indicators, and TTPs.
+- 🟣 **[ManaTI](https://github.com/SpiderLabs/ManaTI)** - Threat intelligence platform that aggregates and correlates threat data from multiple sources.
+- 🔴 **[Sigma](https://github.com/SigmaHQ/sigma)** - Generic signature format for SIEM systems, enabling detection rule sharing across platforms.
+- 🟢 **[Sigma CLI](https://github.com/SigmaHQ/sigma-cli)** - Command-line tool for converting Sigma rules to SIEM-specific queries.
+- 🟡 **[Uncoder.io](https://uncoder.io/)** - Online tool for converting Sigma rules and other detection queries between SIEM platforms.
+- 🔵 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK for validating SIEM detection capabilities.
+- 🟠 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform for testing SIEM and detection capabilities.
+- 🟣 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises, adversary emulation, and detection validation.
+- 🔴 **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)** - Rapid forensic artifact analysis tool for Windows event logs and other endpoint telemetry.
+- 🟢 **[Hayabusa](https://github.com/Yamato-Security/hayabusa)** - Windows event log analysis tool for threat hunting and incident response.
+- 🟡 **[APT-Hunter](https://github.com/ahmedkhlief/APT-Hunter)** - Threat hunting tool for Windows event logs, designed to detect APT activity.
+- 🔵 **[DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI)** - PowerShell module for threat hunting via Windows event log analysis.
+- 🟠 **[Event Log Explorer](https://eventlogxp.com/)** - Windows event log analysis tool for security monitoring, auditing, and forensic investigation.
+- 🟣 **[Log Parser Lizard](https://www.lizard-labs.com/log_parser_lizard.aspx)** - GUI tool for analyzing Windows event logs and other log sources using SQL-like queries.
+- 🔴 **[Log Parser](https://learn.microsoft.com/en-us/windows/win32/tools/log-parser-2-2)** - Microsoft tool for parsing and analyzing log files using SQL-like queries.
+- 🟢 **[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)** - Windows system monitoring tool that logs detailed system activity for SIEM ingestion and threat detection.
+- 🟡 **[Sysmon Modular](https://github.com/olafhartong/sysmon-modular)** - Community-driven Sysmon configuration repository for enhanced endpoint visibility.
+- 🔵 **[SwiftOnSecurity Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config)** - Widely used Sysmon configuration for high-quality endpoint logging.
+- 🟠 **[Olaf Hartong Sysmon Config](https://github.com/olafhartong/sysmon-modular)** - Comprehensive Sysmon configuration for advanced threat detection and hunting.
+- 🟣 **[Windows Event Forwarding (WEF)](https://learn.microsoft.com/en-us/windows/win32/wec/windows-event-collector)** - Built-in Windows mechanism for centralized event log collection and forwarding to SIEM.
+- 🔴 **[Windows Event Collector (WEC)](https://learn.microsoft.com/en-us/windows/win32/wec/windows-event-collector)** - Windows service for collecting and storing events from remote computers.
+- 🟢 **[NXLog](https://nxlog.co/)** - Log collection and forwarding tool for centralized log management and SIEM integration.
+- 🟡 **[Filebeat](https://www.elastic.co/beats/filebeat)** - Lightweight shipper for forwarding and centralizing log data to Elasticsearch and Logstash.
+- 🔵 **[Winlogbeat](https://www.elastic.co/beats/winlogbeat)** - Elastic Beat for shipping Windows event logs to Elasticsearch for analysis.
+- 🟠 **[Auditbeat](https://www.elastic.co/beats/auditbeat)** - Elastic Beat for auditing Linux and Windows endpoint activity and log collection.
+- 🟣 **[Packetbeat](https://www.elastic.co/beats/packetbeat)** - Elastic Beat for monitoring network traffic and application performance logs.
+- 🔴 **[Heartbeat](https://www.elastic.co/beats/heartbeat)** - Elastic Beat for uptime monitoring of network services and hosts.
+- 🟢 **[Metricbeat](https://www.elastic.co/beats/metricbeat)** - Elastic Beat for collecting network and system metrics.
+- 🟡 **[Fluentd](https://www.fluentd.org/)** - Open-source data collector for unified logging and log analysis.
+- 🔵 **[Fluent Bit](https://fluentbit.io/)** - Lightweight log and metrics processor for collecting and forwarding logs to SIEM and analytics platforms.
+- 🟠 **[Rsyslog](https://www.rsyslog.com/)** - Open-source syslog daemon for high-performance log processing and forwarding.
+- 🟣 **[Syslog-ng](https://www.syslog-ng.com/)** - Open-source syslog implementation for log collection, processing, and forwarding.
+- 🔴 **[Graylog](https://www.graylog.org/)** - Open-source log management platform for centralized log collection, search, and analysis.
+- 🟢 **[LogDNA](https://www.logdna.com/)** - Cloud-based log management platform for centralized log analysis and monitoring.
+- 🟡 **[Papertrail](https://www.papertrail.com/)** - Cloud-based log management service for centralized log aggregation and search.
+- 🔵 **[Datadog Log Management](https://www.datadoghq.com/product/log-management/)** - Cloud-based log management and analysis platform with SIEM capabilities.
+- 🟠 **[Sumo Logic](https://www.sumologic.com/)** - Cloud-native SIEM and log analytics platform for security monitoring and compliance.
+- 🟣 **[Humio](https://www.humio.com/)** - Log management and SIEM platform designed for high-speed ingestion and real-time analysis.
+- 🔴 **[CrowdStrike Falcon LogScale](https://www.crowdstrike.com/products/observability/falcon-logscale/)** - Log management and analysis platform for security telemetry and threat hunting.
+- 🟢 **[Panther](https://panther.com/)** - Cloud-native SIEM platform for log analysis, detection, and response.
+- 🟡 **[Securonix](https://www.securonix.com/)** - Cloud-native SIEM and UEBA platform for advanced threat detection and response.
+- 🔵 **[Exabeam](https://www.exabeam.com/)** - SIEM and UEBA platform for threat detection, investigation, and response.
+- 🟠 **[Rapid7 InsightIDR](https://www.rapid7.com/products/insightidr/)** - Cloud-based SIEM and XDR platform for threat detection and response.
+- 🟣 **[Splunk Cloud](https://www.splunk.com/en_us/products/splunk-cloud-platform.html)** - Cloud-based Splunk platform for SIEM, log analysis, and security monitoring.
+- 🔴 **[Splunk Enterprise](https://www.splunk.com/en_us/products/splunk-enterprise.html)** - On-premises Splunk platform for SIEM, log analysis, and security monitoring.
+- 🟢 **[Splunk Phantom](https://www.splunk.com/en_us/products/phantom.html)** - SOAR platform for security automation, orchestration, and response.
+- 🟡 **[Splunk SOAR](https://www.splunk.com/en_us/products/splunk-soar.html)** - Security orchestration, automation, and response platform for automating security workflows.
+- 🔵 **[IBM Resilient](https://www.ibm.com/products/resilient)** - SOAR platform for incident response and security automation.
+- 🟠 **[Palo Alto Networks Cortex XSOAR](https://www.paloaltonetworks.com/cortex/cortex-xsoar)** - SOAR platform for security automation, orchestration, and incident response.
+- 🟣 **[TheHive Project](https://thehive-project.org/)** - Scalable, open-source security incident response platform for SOCs, CSIRTs, and CERTs.
+- 🔴 **[Cortex](https://github.com/TheHive-Project/Cortex)** - Observable analysis and active response engine that integrates with TheHive for automated threat intelligence enrichment.
+- 🟢 **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for gathering, sharing, and correlating IOCs and threat intelligence.
+- 🟡 **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence knowledge and observables, built on STIX 2.1.
+- 🔵 **[Yeti](https://yeti-platform.github.io/)** - Platform for organizing threat intelligence data, including observables, indicators, and TTPs.
+- 🟠 **[ManaTI](https://github.com/SpiderLabs/ManaTI)** - Threat intelligence platform that aggregates and correlates threat data from multiple sources.
+- 🟣 **[Sigma](https://github.com/SigmaHQ/sigma)** - Generic signature format for SIEM systems, enabling detection rule sharing across platforms.
+- 🔴 **[Sigma CLI](https://github.com/SigmaHQ/sigma-cli)** - Command-line tool for converting Sigma rules to SIEM-specific queries.
+- 🟢 **[Uncoder.io](https://uncoder.io/)** - Online tool for converting Sigma rules and other detection queries between SIEM platforms.
+- 🟡 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK for validating SIEM detection capabilities.
+- 🔵 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform for testing SIEM and detection capabilities.
+- 🟠 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises, adversary emulation, and detection validation.
+- 🟣 **[Chainsaw](https://github.com/WithSecureLabs/chainsaw)** - Rapid forensic artifact analysis tool for Windows event logs and other endpoint telemetry.
+- 🔴 **[Hayabusa](https://github.com/Yamato-Security/hayabusa)** - Windows event log analysis tool for threat hunting and incident response.
+- 🟢 **[APT-Hunter](https://github.com/ahmedkhlief/APT-Hunter)** - Threat hunting tool for Windows event logs, designed to detect APT activity.
+- 🟡 **[DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI)** - PowerShell module for threat hunting via Windows event log analysis.
+- 🔵 **[Event Log Explorer](https://eventlogxp.com/)** - Windows event log analysis tool for security monitoring, auditing, and forensic investigation.
+- 🟠 **[Log Parser Lizard](https://www.lizard-labs.com/log_parser_lizard.aspx)** - GUI tool for analyzing Windows event logs and other log sources using SQL-like queries.
+- 🟣 **[Log Parser](https://learn.microsoft.com/en-us/windows/win32/tools/log-parser-2-2)** - Microsoft tool for parsing and analyzing log files using SQL-like queries.
+- 🔴 **[Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)** - Windows system monitoring tool that logs detailed system activity for SIEM ingestion and threat detection.
+- 🟢 **[Sysmon Modular](https://github.com/olafhartong/sysmon-modular)** - Community-driven Sysmon configuration repository for enhanced endpoint visibility.
+- 🟡 **[SwiftOnSecurity Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config)** - Widely used Sysmon configuration for high-quality endpoint logging.
+- 🔵 **[Olaf Hartong Sysmon Config](https://github.com/olafhartong/sysmon-modular)** - Comprehensive Sysmon configuration for advanced threat detection and hunting.
+- 🟠 **[Windows Event Forwarding (WEF)](https://learn.microsoft.com/en-us/windows/win32/wec/windows-event-collector)** - Built-in Windows mechanism for centralized event log collection and forwarding to SIEM.
+- 🟣 **[Windows Event Collector (WEC)](https://learn.microsoft.com/en-us/windows/win32/wec/windows-event-collector)** - Windows service for collecting and storing events from remote computers.
+
+---
+
+# Digital Forensics & Incident Response (DFIR)
+
+- 🧠 **[Volatility 3](https://github.com/volatilityfoundation/volatility3)** - The reference framework for memory forensics analysis. Rewritten in Python 3 with a modular plugin architecture, supporting Windows, Linux, and macOS memory dumps. Essential plugins include `pslist`/`psscan` for process enumeration, `malfind` for code injection detection, and `netscan` for active network connections.
+- 🐧 **[AVML (Acquire Volatile Memory for Linux)](https://github.com/microsoft/avml)** - Microsoft's static binary for Linux memory acquisition. Portable and dependency-free, designed for incident response scenarios where software installation is not possible. Produces dumps compatible with Volatility and LiME.
+- 🐧 **[LiME (Linux Memory Extractor)](https://github.com/504ensicsLabs/LiME)** - Kernel module for acquiring physical memory dumps on Linux systems. Supports network-based capture to avoid writing evidence to the compromised system's disk. Requires compilation for the target kernel version.
+- 🪟 **[WinPmem](https://github.com/velocidex/WinPmem)** - Open-source memory acquisition tool for Windows. Supports raw and DMP output formats, with CLI and GUI options available.
+- 🪟 **[FTK Imager](https://www.exterro.com/ftk-imager)** - Free tool from Exterro (formerly AccessData) that combines disk imaging with memory capture. Can capture RAM and create a forensic disk image simultaneously. Output is compatible with Volatility after renaming to `.raw`.
+- 🪟 **[KAPE (Kroll Artifact Parser and Extractor)](https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape)** - Triage framework that rapidly collects forensic artifacts from Windows systems: MFT, event logs, prefetch, registry hives, browser data, and more. Uses configurable "targets" (what to collect) and "modules" (how to process it). Ideal for field IR where you need critical artifacts packaged in minutes.
+- 🦖 **[Velociraptor](https://github.com/Velocidex/velociraptor)** - Enterprise-scale IR and hunting platform. Deploy agents on endpoints and execute VQL (Velociraptor Query Language) queries remotely across thousands of systems. Supports remote artifact collection, continuous monitoring, and integrated timeline analysis.
+- 🔍 **[Autopsy](https://www.autopsy.com/)** - Open-source disk forensics platform with a full GUI. Built on The Sleuth Kit, it provides file carving, keyword search, timeline analysis, hash matching, web artifacts, and email analysis. The open-source alternative to EnCase and FTK.
+- 🧰 **[The Sleuth Kit (TSK)](https://www.sleuthkit.org/sleuthkit/)** - Command-line forensic library underlying Autopsy. Individual tools include `fls` for listing files (including deleted), `icat` for extracting files by inode, `mmls` for partition tables, and `tsk_recover` for deleted file recovery.
+- ⏳ **[Plaso / log2timeline](https://github.com/log2timeline/plaso)** - Super-timeline engine that extracts timestamps from dozens of artifact sources (event logs, registry, filesystem, browser, prefetch) and unifies them into a single chronological timeline. Essential for reconstructing incident sequences.
+- 📊 **[Timesketch](https://github.com/google/timesketch)** - Collaborative forensic timeline analysis platform from Google. Allows multiple analysts to explore, annotate, and share findings from Plaso-generated timelines.
+- 🪟 **[Eric Zimmerman's Tools](https://ericzimmerman.github.io/)** - A suite of free Windows artifact analysis tools that have become de facto standards in DFIR. Includes:
+  - **MFTECmd**: Parses NTFS Master File Table, extracting all 8 timestamps (SI and FN) per entry
+  - **PECmd**: Parses Prefetch files for execution timestamps and accessed files
+  - **EvtxECmd**: Parses Windows Event Logs (EVTX) to CSV/JSON
+  - **AmcacheParser**: Extracts program execution evidence with SHA1 hashes
+  - **AppCompatCacheParser**: Parses ShimCache data from SYSTEM hive
+  - **RECmd / Registry Explorer**: Registry hive analysis (CLI and GUI)
+  - **SBECmd / ShellBags Explorer**: Reconstructs user folder navigation
+  - **Timeline Explorer**: High-performance CSV viewer for timeline data 
+- 📜 **[RegRipper 3.0](https://github.com/keydet89/RegRipper3.0)** - Perl-based Windows registry hive parser for forensic analysis. Extracts evidence of executed programs, USB devices, network history, and system configuration.
+- 🐍 **[RegRippy](https://github.com/airbus-cert/regrippy)** - Modern Python 3 alternative to RegRipper for extracting forensic data from Windows registry hives.
+- 🔎 **[Hayabusa](https://github.com/Yamato-Security/hayabusa)** - Windows event log analyzer and threat hunting tool. Applies Sigma-based detection rules to logs, synchronizes rules from remote repositories, and generates forensic timelines. Written in Rust for performance.
+- 🎯 **[LogonTracer](https://github.com/JPCERTCC/LogonTracer)** - Security auditing tool for visualizing Windows logon activity. Maps account names and network addresses in a graph database, features Sigma detection engine, and includes anomalous behavior detection using statistical analysis and hidden Markov models.
+- 🐝 **[Beagle](https://github.com/yampelo/beagle)** - Incident response and digital forensics tool that transforms security logs and data sources into visual graphs for analysis.
+- 📁 **[NTFSTool](https://github.com/thewhiteninja/ntfstool)** - Comprehensive NTFS forensic analysis tool. Supports parsing, MFT analysis, BitLocker detection, and deleted file recovery.
+- 🔄 **[RecuperaBit](https://github.com/Lazza/RecuperaBit)** - Reconstructs and recovers data from damaged or corrupted NTFS partitions.
+- 📋 **[USN-Journal-Parser](https://github.com/PoorBillionaire/USN-Journal-Parser)** - Python script to parse NTFS USN Journal for file system activity analysis.
+- 🐍 **[python-ntfs](https://github.com/williballenthin/python-ntfs)** - Open-source Python library for NTFS file system analysis.
+- 📜 **[python-evt](https://github.com/williballenthin/python-evt)** - Pure Python parser for classic Windows Event Log files (.evt format).
+- 🛠️ **[python-registry](https://github.com/williballenthin/python-registry)** - Python library for parsing Windows registry hive files.
+- 🐧 **[SIFT Workstation](https://www.sans.org/tools/sift-workstation/)** - SANS forensic workstation for Linux, bundling Volatility, Plaso, TSK, and Eric Zimmerman's tools in a ready-to-use environment.
+- 🐧 **[CAINE](https://www.caine-live.net/)** - Digital forensics live Linux distribution for evidence acquisition and analysis.
+- 💾 **[dc3dd / dcfldd](https://sourceforge.net/projects/dc3dd/)** - Enhanced versions of the `dd` command with built-in hashing, logging, and error handling for forensic disk imaging.
+- 💿 **[Guymager](https://guymager.sourceforge.io/)** - Graphical forensic imager for Linux, producing E01 format images with embedded metadata and optional compression.
+- 💿 **[ewf-tools](https://github.com/libyal/libewf)** - Suite of tools for handling Expert Witness Format (E01) images: acquisition (`ewfacquire`), verification (`ewfverify`), mounting (`ewfmount`), and export (`ewfexport`).
+- 🔬 **[Foremost](https://foremost.sourceforge.net/)** - File carving tool for data recovery based on file headers and footers. Useful for recovering deleted files from disk images.
+- 🔪 **[Scalpel](https://github.com/sleuthkit/scalpel)** - File carving tool that reads a database of header and footer definitions to extract files from disk images.
+- 🧪 **[TestDisk](https://www.cgsecurity.org/wiki/TestDisk)** - Disk recovery tool for restoring lost partitions and repairing boot sectors.
+- 📸 **[PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)** - File recovery software for recovering deleted files from disks, memory cards, and other storage media.
+- 🔐 **[hashdeep](https://github.com/jessek/hashdeep)** - Recursive file hashing tool with audit mode for verifying forensic image integrity.
+- 🌐 **[NetworkMiner](https://www.netresec.com/?page=NetworkMiner)** - Network forensic analysis tool (NFAT) for reconstructing network sessions and extracting artifacts from PCAP files.
+- 🕸️ **[Xplico](https://www.xplico.org/)** - Network forensics analysis tool that reconstructs application data from captured traffic.
+- 🕵️ **[Process Recovery](https://github.com/)** - Recovers executables and executable memory regions from live Linux processes, including deleted and memory-backed files, with hashes and structured manifests.
+- 📓 **[Bash History Recovery](https://github.com/)** - Techniques and tools for recovering Linux command history despite anti-forensic deletion. Sources include auditd logs (`-a always,exit -F arch=b64 -S execve -k command_exec`), alternate history files, and open file descriptors in `/proc/[PID]/fd/`.
+- 📊 **[LogonTracer](https://github.com/JPCERTCC/LogonTracer)** - Visualizes and analyzes Windows logon activity for threat hunting and incident investigation.
+- 🔬 **[Chain of Custody Tools](https://github.com/)** - Tools for documenting evidence handling, including hash verification, chain-of-custody logs, and evidence integrity validation.
+---
+
+# Malware Analysis
+
+- 🦠 **[VirusTotal](https://www.virustotal.com/)** - Web-based malware analysis platform that aggregates results from 70+ antivirus engines, URL scanners, and file analysis tools. Supports file, URL, domain, and IP submissions with community comments and threat intelligence context.
+- 🔬 **[Hybrid Analysis](https://www.hybrid-analysis.com/)** - Free malware analysis service powered by Falcon Sandbox. Provides detailed behavioral reports for submitted files and URLs, including process trees, network activity, MITRE ATT&CK mapping, and indicators of compromise.
+- 🧪 **[Joe Sandbox](https://www.joesandbox.com/)** - Deep malware analysis platform with interactive sandbox capabilities. Supports Windows, Linux, macOS, and Android analysis with detailed behavioral reports, config extraction, and evasion detection.
+- 🔄 **[Cuckoo Sandbox](https://cuckoosandbox.org/)** - Open-source automated malware analysis system. Executes suspicious files in an isolated environment and generates comprehensive reports on file system changes, network activity, and memory artifacts.
+- 🦖 **[CAPEv2](https://github.com/kevoreilly/CAPEv2)** - Advanced malware analysis sandbox forked from Cuckoo. Adds config and payload extraction, anti-evasion capabilities, and support for multiple analysis packages.
+- 🐍 **[ANY.RUN](https://any.run/)** - Interactive online malware sandbox with real-time analysis. Allows analysts to interact with the sandbox environment, observe behavior live, and download comprehensive reports.
+- 🛡️ **[Azul](https://www.cyber.gov.au/about-us/view-all-content/news/explore-analyse-and-correlate-malware-at-scale-with-azul)** - Open-source malware analysis tool publicly released by the Australian Signals Directorate (ASD). Provides storage, automated analysis (sandbox execution, config extraction, file carving), and correlation of samples sharing similar functionality or C2 infrastructure.
+- 🧠 **[FLOSS (FireEye Labs Obfuscated String Solver)](https://github.com/mandiant/flare-floss)** - Open-source tool from Mandiant that automatically extracts and deobfuscates strings from malware binaries. Essential for analyzing packed and obfuscated samples .
+- 📜 **[YARA](https://github.com/VirusTotal/yara)** - Pattern-matching tool for identifying and classifying malware samples. Uses rule-based signatures to detect specific malware families, behaviors, or characteristics.
+- 📊 **[CAPA](https://github.com/mandiant/capa)** - Open-source tool from Mandiant that identifies capabilities in executable files. Detects behaviors like process injection, persistence mechanisms, and anti-analysis techniques.
+- 🔍 **[pefile](https://github.com/erocarrera/pefile)** - Python module for parsing Portable Executable (PE) files. Provides access to headers, sections, imports, exports, and other PE structures for static analysis.
+- 📦 **[LIEF](https://lief.quarkslab.com/)** - Library for parsing and modifying executable formats (PE, ELF, Mach-O). Useful for binary analysis, instrumentation, and malware research.
+- 🐉 **[Ghidra](https://ghidra-sre.org/)** - Open-source software reverse engineering framework from the NSA. Includes a decompiler, disassembler, and powerful scripting capabilities for malware analysis.
+- 🔎 **[IDA Pro](https://hex-rays.com/ida-pro/)** - Industry-standard interactive disassembler and debugger. The Hex-Rays decompiler is widely considered the most accurate for producing C pseudocode from binaries.
+- 🧰 **[Radare2](https://github.com/radareorg/radare2)** - Open-source reverse engineering framework with a command-line interface. Supports disassembly, debugging, binary parsing, and scripting.
+- 🎯 **[x64dbg](https://x64dbg.com/)** - Open-source Windows debugger for x64 and x86 binaries. Essential for dynamic malware analysis, unpacking, and behavioral investigation.
+- 🧪 **[OllyDbg](http://www.ollydbg.de/)** - Classic 32-bit assembler-level debugger for Windows. Still useful for analyzing older malware samples and learning reverse engineering fundamentals.
+- 🧬 **[dnSpy](https://github.com/dnSpy/dnSpy)** - .NET debugger and assembly editor. Essential for analyzing .NET malware, allowing decompilation, editing, and debugging of managed assemblies.
+- 🛠️ **[Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)** - Microsoft Sysinternals tool for real-time monitoring of file system, registry, and process activity. Critical for observing malware behavior during dynamic analysis.
+- 📡 **[Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)** - Advanced Windows process monitoring tool. Shows process trees, loaded DLLs, handles, and can inspect process memory.
+- 🌐 **[Wireshark](https://www.wireshark.org/)** - Network protocol analyzer for capturing and inspecting malware C2 traffic. Essential for understanding network behavior and extracting indicators.
+- 🎣 **[FakeNet-NG](https://github.com/mandiant/flare-fakenet-ng)** - Next-generation dynamic network analysis tool from Mandiant. Simulates network services to trick malware into revealing C2 communication and download behavior.
+- 🕸️ **[INetSim](https://www.inetsim.org/)** - Internet services simulation suite for malware analysis. Simulates common internet services (HTTP, HTTPS, DNS, SMTP) to observe malware network behavior.
+- 📄 **[oletools](https://github.com/decalage2/oletools)** - Python tools for analyzing Microsoft OLE2 files (Office documents). Includes `olevba` for macro extraction, `oleid` for suspicious file identification, and `rtfobj` for RTF analysis.
+- 📑 **[pdf-parser](https://blog.didierstevens.com/programs/pdf-tools/)** - Tool for parsing PDF documents and analyzing embedded JavaScript, objects, and streams. Essential for analyzing malicious PDFs.
+- 🧪 **[malwagon](https://pypi.org/project/malwagon/)** - Command-line client for the Malwagon malware analysis sandbox. Provides static, dynamic, threat intelligence, and AI analysis layers with CI/CD integration via exit codes.
+- 🔬 **[PROTEUS](https://pypi.org/project/proteus-analyzer/)** - Advanced zero-day static analysis engine built with Rust and Python. Features entropy calculation, heuristic scoring, string extraction, IOC detection, and ML-ready feature engineering.
+- 📊 **[r2inspect](https://pypi.org/project/r2inspect/)** - Professional malware analysis framework powered by radare2. Supports PE, ELF, and Mach-O binaries with packer detection, crypto detection, anti-analysis indicators, and YARA integration.
+- 🛡️ **[NusantaraScan](https://pypi.org/project/nusantarascan/)** - Open-source binary analysis tool for modern malware workflows. Features RAT detection (DarkComet, NanoCore, NjRAT), packer detection, entropy visualization, and VirusTotal integration.
+- 🔧 **[MalwareForge](https://github.com/kaandemir993/MalwareForge---Advanced-Static-Malware-Analyzer)** - Advanced static malware analyzer that detects 8 injection techniques, critical API calls, and hidden strings. Supports PE, ELF, Mach-O, and script formats with VirusTotal integration.
+- 🐝 **[vault1337](https://hub.docker.com/r/vault1337/vault1337)** - Self-hosted malware sample management and analysis platform. Features obfuscated storage, config extraction, SimHash clustering, YARA retrohunting, and integrity verification.
+- 🤖 **[OGhidra](https://github.com/LLNL/OGhidra)** - AI-driven binary analysis tool from Lawrence Livermore National Laboratory. Uses locally hosted agentic AI to automatically reverse engineer binaries for malware and vulnerability discovery.
+- 📚 **[awesome-malware-analysis](https://github.com/rshipp/awesome-malware-analysis)** - Meta-index of 400+ tools, frameworks, and resources for malware analysis. Organized by categories including static analysis, dynamic analysis, network analysis, and memory forensics.
+
+---
+
+# Web Application Defense
+
+- 🛡️ **[ModSecurity](https://github.com/SpiderLabs/ModSecurity)** - The most widely deployed open-source web application firewall (WAF). Acts as an Apache, Nginx, or IIS module, inspecting HTTP traffic in real time and blocking attacks based on customizable rule sets.
+- 📜 **[OWASP Core Rule Set (CRS)](https://github.com/coreruleset/coreruleset)** - The de facto standard rule set for ModSecurity and compatible WAFs. Protects against OWASP Top 10 threats including SQL injection, XSS, LFI, RFI, and RCE.
+- 🔵 **[NAXSI](https://github.com/nbs-system/naxsi)** - Open-source, high-performance WAF for Nginx. Uses a whitelist-based approach with a small, easy-to-learn rule set, making it lightweight and fast.
+- 🟠 **[BunkerWeb](https://github.com/bunkerity/bunkerweb)** - Next-generation open-source web application firewall built on Nginx. Provides out-of-the-box security with automatic HTTPS, ModSecurity integration, and a modern web UI.
+- 🟣 **[Coraza](https://github.com/corazawaf/coraza)** - Enterprise-grade, open-source WAF library written in Go. OWASP Core Rule Set compatible, designed for embedding into applications and reverse proxies.
+- 🔴 **[Cloudflare WAF](https://www.cloudflare.com/waf/)** - Cloud-based web application firewall with machine learning-powered rules, OWASP Top 10 protection, and DDoS mitigation. Free tier available for basic protection.
+- 🟡 **[AWS WAF](https://aws.amazon.com/waf/)** - Cloud-native WAF from Amazon that protects against common web exploits and bots. Integrates with CloudFront, ALB, and API Gateway with customizable rules.
+- 🟢 **[Azure Web Application Firewall](https://azure.microsoft.com/en-us/products/web-application-firewall/)** - Cloud WAF on Azure Front Door and Application Gateway. Provides centralized protection with managed rule sets and custom rules.
+- 🔵 **[Google Cloud Armor](https://cloud.google.com/armor)** - Google's edge security service providing DDoS protection and WAF capabilities for applications behind Google Cloud load balancers.
+- 🟠 **[F5 Advanced WAF](https://www.f5.com/products/security/advanced-waf)** - Enterprise WAF with behavioral analytics, bot defense, and API protection. Protects applications across on-premises, cloud, and hybrid environments.
+- 🟣 **[Imperva WAF](https://www.imperva.com/products/web-application-firewall-waf/)** - Enterprise-grade cloud WAF with virtual patching, bot mitigation, and API security. Provides comprehensive protection for web applications and APIs.
+- 🔴 **[Fortinet FortiWeb](https://www.fortinet.com/products/web-application-firewall/fortiweb)** - Enterprise WAF with machine learning-based threat detection, API protection, and DDoS mitigation.
+- 🟡 **[Barracuda WAF](https://www.barracuda.com/products/webapplicationfirewall)** - Cloud and on-premises WAF with automated security, DDoS protection, and bot mitigation.
+- 🟢 **[Wallarm](https://www.wallarm.com/)** - Cloud-native WAF and API security platform with automated threat detection and response. Protects microservices, APIs, and serverless workloads.
+- 🔵 **[Signal Sciences (Fastly)](https://www.fastly.com/products/web-application-firewall)** - Cloud WAF with real-time attack visibility, blocking capabilities, and integrations with DevOps workflows.
+- 🟠 **[Sucuri Firewall](https://sucuri.net/website-firewall/)** - Cloud-based website firewall providing DDoS protection, malware scanning, and virtual patching for CMS platforms.
+- 🟣 **[Wordfence](https://www.wordfence.com/)** - Security plugin for WordPress with a built-in WAF, malware scanner, and real-time threat intelligence feed.
+- 🔴 **[Snyk](https://snyk.io/)** - Developer-first security platform for finding and fixing vulnerabilities in open-source dependencies, containers, and infrastructure as code.
+- 🟡 **[SonarQube](https://www.sonarsource.com/products/sonarqube/)** - Open-source platform for continuous inspection of code quality and security. Detects vulnerabilities, code smells, and security hotspots.
+- 🟢 **[Checkmarx](https://checkmarx.com/)** - Static application security testing (SAST) platform for identifying security vulnerabilities in source code early in the development lifecycle.
+- 🔵 **[Fortify](https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer)** - Micro Focus static code analyzer for identifying security vulnerabilities in source code across 25+ languages.
+- 🟠 **[Veracode](https://www.veracode.com/)** - Cloud-based application security platform providing SAST, DAST, and SCA capabilities.
+- 🟣 **[Contrast Security](https://www.contrastsecurity.com/)** - Interactive application security testing (IAST) platform that instruments applications to detect vulnerabilities at runtime.
+- 🔴 **[Acunetix](https://www.acunetix.com/)** - Automated web vulnerability scanner detecting SQL injection, XSS, and other web vulnerabilities.
+- 🟡 **[Burp Suite](https://portswigger.net/burp)** - Industry-standard web application security testing platform. The Community Edition is free, while Professional adds automated scanning.
+- 🟢 **[OWASP ZAP](https://www.zaproxy.org/)** - Open-source web application security scanner. Ideal for developers and security teams to find vulnerabilities in web applications.
+- 🔵 **[Nikto](https://cirt.net/Nikto2)** - Open-source web server scanner for detecting dangerous files, outdated software, and misconfigurations.
+- 🟠 **[SQLmap](https://sqlmap.org/)** - Open-source penetration testing tool that automates detection and exploitation of SQL injection flaws.
+- 🟣 **[XSStrike](https://github.com/s0md3v/XSStrike)** - Advanced XSS detection suite with fuzzing, context analysis, and WAF bypass capabilities.
+- 🔴 **[OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/)** - Software composition analysis tool that identifies project dependencies and checks for known vulnerabilities.
+- 🟡 **[Trivy](https://github.com/aquasecurity/trivy)** - Comprehensive vulnerability scanner for containers, Kubernetes, code repositories, and cloud configurations.
+- 🟢 **[Grype](https://github.com/anchore/grype)** - Vulnerability scanner for container images and filesystems from Anchore.
+- 🔵 **[Safety](https://github.com/pyupio/safety)** - Python dependency vulnerability scanner that checks installed packages against known security advisories.
+- 🟠 **[Bandit](https://github.com/PyCQA/bandit)** - Security linter for Python code that finds common security issues like hardcoded passwords and SQL injection.
+- 🟣 **[GitLeaks](https://github.com/gitleaks/gitleaks)** - SAST tool for detecting and preventing hardcoded secrets like passwords, API keys, and tokens in git repositories.
+- 🔴 **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** - Secret scanning tool that searches git repositories for high-entropy strings and verified secrets.
+- 🟡 **[Semgrep](https://semgrep.dev/)** - Lightweight static analysis tool for finding bugs and enforcing code standards. Supports custom rules for security patterns.
+- 🟢 **[CodeQL](https://codeql.github.com/)** - Semantic code analysis engine from GitHub. Allows querying code as data to find security vulnerabilities.
+- 🔵 **[Dependabot](https://github.com/dependabot)** - GitHub's automated dependency update tool that alerts on vulnerable dependencies and creates pull requests to update them.
+- 🟠 **[Renovate](https://github.com/renovatebot/renovate)** - Automated dependency update tool that keeps dependencies current and secure across multiple package managers.
+- 🟣 **[OWASP Amass](https://github.com/owasp-amass/amass)** - Network mapping and external asset discovery tool for attack surface management.
+- 🔴 **[Nuclei](https://github.com/projectdiscovery/nuclei)** - Fast and customizable vulnerability scanner based on simple YAML templates for web application security testing.
+- 🟡 **[Httpx](https://github.com/projectdiscovery/httpx)** - Fast and multi-purpose HTTP toolkit for probing web servers and identifying technologies.
+- 🟢 **[FFUF](https://github.com/ffuf/ffuf)** - Fast web fuzzer written in Go for directory discovery, parameter fuzzing, and virtual host discovery.
+- 🔵 **[Gobuster](https://github.com/OJ/gobuster)** - Directory/file and DNS busting tool for discovering hidden web content.
+- 🟠 **[Dirsearch](https://github.com/maurosoria/dirsearch)** - Web path scanner for brute-forcing directories and files on web servers.
+- 🟣 **[WPScan](https://wpscan.com/)** - WordPress security scanner that identifies vulnerabilities in WordPress core, plugins, and themes.
+- 🔴 **[CMSmap](https://github.com/Dionach/CMSmap)** - CMS detection and exploitation tool for WordPress, Joomla, and Drupal.
+- 🟡 **[WhatWeb](https://github.com/urbanadventurer/WhatWeb)** - Web technology fingerprinting tool for identifying CMS, frameworks, and server software.
+- 🟢 **[Wappalyzer](https://www.wappalyzer.com/)** - Browser extension and API for identifying technologies used on websites.
+- 🔵 **[BuiltWith](https://builtwith.com/)** - Web technology lookup and analysis platform for identifying technologies used on websites.
+- 🟠 **[Shodan](https://www.shodan.io/)** - Search engine for internet-connected devices, useful for discovering exposed web services and attack surfaces.
+- 🟣 **[Censys](https://censys.io/)** - Internet-wide scanning platform for discovering and monitoring hosts, networks, and services.
+- 🔴 **[Security Headers](https://securityheaders.com/)** - Online tool for analyzing HTTP response headers and grading security configuration.
+- 🟡 **[Mozilla Observatory](https://observatory.mozilla.org/)** - Online tool for analyzing website security headers, TLS configuration, and other security best practices.
+- 🟢 **[SSL Labs](https://www.ssllabs.com/ssltest/)** - Free online service for deep analysis of SSL/TLS configuration of web servers.
+- 🔵 **[Qualys SSL Labs](https://www.ssllabs.com/)** - Comprehensive SSL/TLS testing and analysis platform for web server security assessment.
+- 🟠 **[Hardenize](https://www.hardenize.com/)** - Continuous security monitoring for TLS, DNS, email, and web security configurations.
+- 🟣 **[CSP Evaluator](https://csp-evaluator.withgoogle.com/)** - Google's tool for evaluating Content Security Policy (CSP) implementations.
+- 🔴 **[OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)** - Project providing guidance on HTTP security headers and best practices.
+- 🟡 **[Helmet](https://helmetjs.github.io/)** - Node.js middleware for setting security-related HTTP headers in Express applications.
+- 🟢 **[Django Security](https://docs.djangoproject.com/en/stable/topics/security/)** - Built-in security features in Django framework including CSRF protection, XSS prevention, and SQL injection protection.
+- 🔵 **[Spring Security](https://spring.io/projects/spring-security)** - Comprehensive security framework for Java applications with authentication, authorization, and protection against common vulnerabilities.
+- 🟠 **[OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)** - Application Security Verification Standard providing a basis for testing web application technical security controls.
+- 🟣 **[OWASP SAMM](https://owaspsamm.org/)** - Software Assurance Maturity Model for building and measuring application security programs.
+- 🔴 **[OWASP Top 10](https://owasp.org/www-project-top-ten/)** - The definitive list of the most critical web application security risks.
+- 🟡 **[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)** - Comprehensive collection of application security cheat sheets.
+- 🟢 **[OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)** - Comprehensive guide for testing web application security.
+- 🔵 **[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)** - Deliberately insecure web application for security training and awareness.
+- 🟠 **[OWASP DVWA](https://github.com/digininja/DVWA)** - Damn Vulnerable Web Application for practicing web security testing.
+- 🟣 **[bWAPP](http://www.itsecgames.com/)** - Buggy Web Application with over 100 vulnerabilities for security education.
+- 🔴 **[WebGoat](https://github.com/WebGoat/WebGoat)** - OWASP's deliberately insecure application for learning web security.
+- 🟡 **[PortSwigger Web Security Academy](https://portswigger.net/web-security)** - Free online training platform for learning web application security with interactive labs.
+- 🟢 **[HackTheBox](https://www.hackthebox.com/)** - Online platform for practicing penetration testing and web application security skills.
+- 🔵 **[TryHackMe](https://tryhackme.com/)** - Online platform for learning cybersecurity through hands-on web application security challenges.
+- 🟠 **[PentesterLab](https://pentesterlab.com/)** - Hands-on web application security training platform with exercises and badges.
+- 🟣 **[Root-Me](https://www.root-me.org/)** - Online platform for practicing web application security and other cybersecurity challenges.
+- 🔴 **[OverTheWire](https://overthewire.org/wargames/)** - Wargames for learning security concepts including web application security.
+- 🟡 **[VulnHub](https://www.vulnhub.com/)** - Repository of vulnerable virtual machines for practicing web application security.
+- 🟢 **[PentestBox](https://pentestbox.org/)** - Penetration testing toolkit for Windows with web application security tools pre-installed.
+- 🔵 **[Kali Linux](https://www.kali.org/)** - Security-focused Linux distribution with extensive web application security tools.
+- 🟠 **[Parrot Security OS](https://www.parrotsec.org/)** - Security-focused Linux distribution with web application security tools.
+- 🟣 **[SamuraiWTF](https://github.com/SamuraiWTF/samuraiwtf)** - Web application penetration testing environment with pre-configured tools.
+- 🔴 **[Bugcrowd](https://www.bugcrowd.com/)** - Crowdsourced security platform for bug bounty and vulnerability disclosure programs.
+- 🟡 **[HackerOne](https://www.hackerone.com/)** - Bug bounty and vulnerability disclosure platform connecting organizations with security researchers.
+- 🟢 **[Synack](https://www.synack.com/)** - Crowdsourced security testing platform with a vetted community of researchers.
+- 🔵 **[Cobalt](https://www.cobalt.io/)** - Pentest as a Service (PtaaS) platform for web application security testing.
+- 🟠 **[Intigriti](https://www.intigriti.com/)** - European bug bounty and vulnerability disclosure platform.
+- 🟣 **[YesWeHack](https://www.yeswehack.com/)** - Global bug bounty and vulnerability disclosure platform.
+- 🔴 **[Open Bug Bounty](https://www.openbugbounty.org/)** - Non-profit bug bounty platform for coordinated vulnerability disclosure.
+- 🟡 **[CVE](https://cve.mitre.org/)** - Common Vulnerabilities and Exposures database for tracking web application vulnerabilities.
+- 🟢 **[NVD](https://nvd.nist.gov/)** - National Vulnerability Database providing vulnerability management data and analysis.
+- 🔵 **[Exploit-DB](https://www.exploit-db.com/)** - Archive of public exploits and proof-of-concept code for web application vulnerabilities.
+- 🟠 **[Packet Storm](https://packetstormsecurity.com/)** - Security information portal with exploits, advisories, and tools for web application security.
+- 🟣 **[SecurityFocus](https://www.securityfocus.com/)** - Security information portal with vulnerability advisories and research.
+- 🔴 **[Full Disclosure](https://seclists.org/fulldisclosure/)** - Mailing list for public disclosure of security vulnerabilities.
+- 🟡 **[Bugtraq](https://seclists.org/bugtraq/)** - Classic mailing list for security vulnerability disclosure.
+- 🟢 **[OSS-Security](https://www.openwall.com/lists/oss-security/)** - Mailing list for open-source security vulnerability disclosure.
+- 🔵 **[CERT/CC](https://www.kb.cert.org/vuls/)** - CERT Coordination Center vulnerability notes database.
+- 🟠 **[US-CERT](https://www.cisa.gov/uscert)** - United States Computer Emergency Readiness Team advisories and alerts.
+- 🟣 **[CISA](https://www.cisa.gov/)** - Cybersecurity and Infrastructure Security Agency resources and advisories.
+- 🔴 **[SANS Internet Storm Center](https://isc.sans.edu/)** - Cooperative cyber threat monitor and alert system with web application security insights.
+- 🟡 **[Krebs on Security](https://krebsonsecurity.com/)** - Investigative security news and analysis covering web application security incidents.
+- 🟢 **[BleepingComputer](https://www.bleepingcomputer.com/)** - Security news and technical support site covering web application vulnerabilities and exploits.
+- 🔵 **[The Hacker News](https://thehackernews.com/)** - Security news platform covering web application security and data breaches.
+- 🟠 **[Threatpost](https://threatpost.com/)** - Security news platform covering web application vulnerabilities and threats.
+- 🟣 **[Dark Reading](https://www.darkreading.com/)** - Security news and analysis platform covering web application security.
+- 🔴 **[SecurityWeek](https://www.securityweek.com/)** - Security news and analysis platform covering web application vulnerabilities.
+- 🟡 **[Infosecurity Magazine](https://www.infosecurity-magazine.com/)** - Security news and analysis platform covering web application security.
+- 🟢 **[Help Net Security](https://www.helpnetsecurity.com/)** - Security news platform covering web application vulnerabilities and defense.
+- 🔵 **[Naked Security](https://nakedsecurity.sophos.com/)** - Sophos security news and analysis blog covering web application security.
+- 🟠 **[Google Project Zero](https://googleprojectzero.blogspot.com/)** - Google's security research team blog covering web application vulnerabilities.
+- 🟣 **[Microsoft Security Response Center](https://msrc.microsoft.com/)** - Microsoft's security response center with vulnerability advisories and updates.
+- 🔴 **[Mozilla Security Blog](https://blog.mozilla.org/security/)** - Mozilla's security blog covering web application security and browser vulnerabilities.
+- 🟡 **[Apple Security Updates](https://support.apple.com/en-us/HT201222)** - Apple's security updates and advisories covering web application security.
+- 🟢 **[Cisco Security Advisories](https://tools.cisco.com/security/center/publicationListing.x)** - Cisco's security advisories covering web application vulnerabilities.
+- 🔵 **[Oracle Critical Patch Updates](https://www.oracle.com/security-alerts/)** - Oracle's critical patch updates covering web application security.
+- 🟠 **[Adobe Security Bulletins](https://helpx.adobe.com/security.html)** - Adobe's security bulletins covering web application vulnerabilities.
+- 🟣 **[SAP Security Notes](https://support.sap.com/en/my-support/knowledge-base/security-notes-news.html)** - SAP's security notes covering web application vulnerabilities.
+- 🔴 **[Salesforce Security](https://trust.salesforce.com/en/)** - Salesforce's security trust site covering web application security.
+- 🟡 **[AWS Security Bulletins](https://aws.amazon.com/security/security-bulletins/)** - AWS security bulletins covering web application vulnerabilities.
+- 🟢 **[Azure Security](https://azure.microsoft.com/en-us/updates/security/)** - Azure security updates covering web application vulnerabilities.
+- 🔵 **[Google Cloud Security Bulletins](https://cloud.google.com/support/bulletins)** - Google Cloud security bulletins covering web application vulnerabilities.
+- 🟠 **[OWASP ZAP](https://www.zaproxy.org/)** - Open-source web application security scanner for finding vulnerabilities in web applications.
+- 🟣 **[Burp Suite Community](https://portswigger.net/burp/communitydownload)** - Free version of Burp Suite for web application security testing.
+- 🔴 **[Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/)** - Built-in browser tools for web application security testing and debugging.
+- 🟡 **[Chrome DevTools](https://developer.chrome.com/docs/devtools/)** - Built-in browser tools for web application security testing and debugging.
+- 🟢 **[OWASP WebGoat](https://github.com/WebGoat/WebGoat)** - Deliberately insecure web application for learning web security.
+- 🔵 **[DVWA](https://github.com/digininja/DVWA)** - Damn Vulnerable Web Application for practicing web security testing.
+- 🟠 **[bWAPP](http://www.itsecgames.com/)** - Buggy Web Application with over 100 vulnerabilities for security education.
+- 🟣 **[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)** - Deliberately insecure web application for security training.
+- 🔴 **[PortSwigger Web Security Academy](https://portswigger.net/web-security)** - Free online training platform for learning web application security.
+- 🟡 **[HackTheBox](https://www.hackthebox.com/)** - Online platform for practicing penetration testing and web application security.
+- 🟢 **[TryHackMe](https://tryhackme.com/)** - Online platform for learning cybersecurity through hands-on web application security challenges.
+- 🔵 **[PentesterLab](https://pentesterlab.com/)** - Hands-on web application security training platform.
+- 🟠 **[Root-Me](https://www.root-me.org/)** - Online platform for practicing web application security and other cybersecurity challenges.
+- 🟣 **[OverTheWire](https://overthewire.org/wargames/)** - Wargames for learning security concepts including web application security.
+- 🔴 **[VulnHub](https://www.vulnhub.com/)** - Repository of vulnerable virtual machines for practicing web application security.
+- 🟡 **[PentestBox](https://pentestbox.org/)** - Penetration testing toolkit for Windows with web application security tools.
+- 🟢 **[Kali Linux](https://www.kali.org/)** - Security-focused Linux distribution with extensive web application security tools.
+- 🔵 **[Parrot Security OS](https://www.parrotsec.org/)** - Security-focused Linux distribution with web application security tools.
+- 🟠 **[SamuraiWTF](https://github.com/SamuraiWTF/samuraiwtf)** - Web application penetration testing environment with pre-configured tools.
+- 🟣 **[Bugcrowd](https://www.bugcrowd.com/)** - Crowdsourced security platform for bug bounty and vulnerability disclosure programs.
+- 🔴 **[HackerOne](https://www.hackerone.com/)** - Bug bounty and vulnerability disclosure platform connecting organizations with security researchers.
+- 🟡 **[Synack](https://www.synack.com/)** - Crowdsourced security testing platform with a vetted community of researchers.
+- 🟢 **[Cobalt](https://www.cobalt.io/)** - Pentest as a Service (PtaaS) platform for web application security testing.
+- 🔵 **[Intigriti](https://www.intigriti.com/)** - European bug bounty and vulnerability disclosure platform.
+- 🟠 **[YesWeHack](https://www.yeswehack.com/)** - Global bug bounty and vulnerability disclosure platform.
+- 🟣 **[Open Bug Bounty](https://www.openbugbounty.org/)** - Non-profit bug bounty platform for coordinated vulnerability disclosure.
+
+---
+
+# Identity & Access Management
+
+- 🟢 **[CrowdStrike Falcon Next-Gen Identity Security](https://www.crowdstrike.com/)** - Continuous, risk-aware identity protection across human, non-human, and AI agent identities. Named a Leader in the 2026 GigaOm Radar for ITDR and the only Customers' Choice in Gartner Peer Insights for ITDR.
+- 🔵 **[Keycloak](https://www.keycloak.org/)** - Enterprise-grade open-source identity and access management solution backed by Red Hat. Handles OIDC, SAML, and LDAP federation natively with a fully customizable account management console. The standard choice for organizations needing a full-featured self-hosted IdP.
+- 🟠 **[Authentik](https://goauthentik.io/)** - Modern open-source identity provider and the community favorite alternative to Keycloak. Clean, modern administrative UI with an out-of-the-box user-facing portal for self-service password reset and MFA configuration. Container-native and significantly more approachable than Keycloak.
+- 🟣 **[Zitadel](https://zitadel.com/)** - Cloud-first, lightweight IAM written in Go. Built for Kubernetes and serverless environments from the ground up. Multi-tenant design makes it well-suited for organizations managing external project members or freelancers as separate identity populations.
+- 🔴 **[Ory](https://www.ory.sh/)** - Powerful, headless, cloud-native identity stack composed of separate microservices: Kratos for identity management, Hydra for OAuth2, Keto for permissions, and Oathkeeper for the gateway layer. Best for teams with developer resources who want precise control over every layer.
+- 🟡 **[Authelia](https://www.authelia.com/)** - Lightweight authentication and authorization server designed specifically for reverse proxies (Nginx, Traefik, HAProxy, Caddy). OpenID Certified with TOTP, WebAuthn/FIDO2, and Duo Push support. Excellent for protecting internal self-hosted web applications behind a reverse proxy.
+- 🟢 **[Casdoor](https://casdoor.org/)** - UI-first IAM and SSO platform built with Go and React. Supports OAuth 2.0, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn, and 40+ social login providers out of the box. Integrates with Casbin for fine-grained RBAC and ABAC.
+- 🔵 **[Shibboleth](https://www.shibboleth.net/)** - Web-based single sign-on and federated identity solution, widely adopted in higher education and research institutions. Provides federated authentication, user attribute exchange, and centralized auditing and reporting for inter-organizational collaboration.
+- 🟠 **[ForgeRock (Ping Identity)](https://www.pingidentity.com/)** - Modern, modular, cloud-ready IAM platform suitable for multi-cloud and hybrid environments. Offers Customer and Workforce Identity Management with fraud protection, identity verification, decentralized identity, fine-grained authorization, and AI/ML-driven access decisions.
+- 🟣 **[OpenFGA](https://openfga.dev/)** - Open-source authorization engine based on Relationship-Based Access Control (ReBAC), inspired by Google's Zanzibar. Models access through relationships between users and objects rather than directly assigning permissions to roles.
+- 🔴 **[Casbin](https://casbin.org/)** - Authorization library available in Go, Java, Node.js, Python, .NET, Rust, PHP, and Elixir. Supports ACL, RBAC, and ABAC through a configuration file-based model definition. Switching models requires only a configuration change, not application code modifications.
+- 🟡 **[OPAL (Open Policy Administration Layer)](https://www.opal.ac/)** - Administrative layer for Open Policy Agent (OPA) that detects policy and data changes in real time and pushes live updates to deployed OPA instances without requiring restarts.
+- 🟢 **[Fairwinds RBAC Manager](https://github.com/FairwindsOps/rbac-manager)** - Automates role bindings across Kubernetes namespaces from a single declarative configuration. Reduces configuration drift in environments with hundreds of namespace-user combinations.
+- 🔵 **[BeyondTrust Pathfinder](https://www.beyondtrust.com/)** - Unified privilege-centric identity security platform integrating PAM, ITDR, CIEM, and secrets management. Named a Leader and Outperformer in the 2026 GigaOm Radar for CIEM and Overall Leader in the 2026 KuppingerCole PAM Leadership Compass for the sixth consecutive year.
+- 🟠 **[Palo Alto Networks Cortex Cloud](https://www.paloaltonetworks.com/cortex)** - Cloud Infrastructure Entitlement Management (CIEM) integrated into a unified code-to-cloud-to-SOC platform. Provides continuous visibility into who can access critical cloud assets, enforces least-privilege, and correlates identity risk with misconfigurations and vulnerabilities.
+- 🟣 **[SuperTokens](https://supertokens.com/)** - Open-source authentication solution for application developers. Provides pre-built UI components and backend SDKs for email/password, social login, passwordless, and session management without deploying a full IdP.
+- 🔴 **[FusionAuth](https://fusionauth.io/)** - Developer-focused authentication platform with a free Community Edition. Polished admin console, breached password detection, advanced threat detection, and comprehensive client libraries across major languages.
+
+---
+
+# Vulnerability Management
+
+- 🟡 **[Tenable Nessus](https://www.tenable.com/products/nessus)** - One of the most reliable vulnerability scanners with broad and accurate detection coverage. Frequent plugin updates (100+ per week) keep pace with emerging threats. Works well across on-prem and hybrid environments with compliance reporting for major frameworks out of the box.
+- 🟠 **[Qualys VMDR](https://www.qualys.com/apps/vulnerability-management-detection-response/)** - Consolidates detection and remediation in one platform with the lightest agent among major competitors. TruRisk prioritization helps smaller teams without complex rule configuration. Strong asset discovery and compliance reporting.
+- 🟣 **[Rapid7 InsightVM](https://www.rapid7.com/products/insightvm/)** - Links directly to real exploitation data via Metasploit integration. The most mature Jira integration among the big three, ideal for DevOps teams. Publishes per-asset pricing transparently without requiring a sales call.
+- 🔵 **[CrowdStrike Falcon Spotlight](https://www.crowdstrike.com/)** - Continuous endpoint scanning with real-time insights into security exposures. Integrates with existing security workflows and prioritizes vulnerabilities based on risk. Dashboard useful for quickly understanding overall risk posture.
+- 🟢 **[Microsoft Defender Vulnerability Management](https://www.microsoft.com/en-us/security/business/threat-protection/microsoft-defender-vulnerability-management)** - Built into the Microsoft ecosystem with easier integration and deployment compared to standalone scanners. Provides continuous asset discovery, risk-based prioritization, and remediation tracking.
+- 🔴 **[Tripwire IP360](https://www.tripwire.com/)** - Network vulnerability management across on-premises, cloud, and hybrid environments. Prioritizes vulnerabilities based on business risk with comprehensive asset discovery and flexible reporting capabilities.
+- 🟡 **[WithSecure Elements Vulnerability Management](https://www.withsecure.com/)** - Continuous vulnerability scanning and assessment of networked assets including servers, endpoints, and cloud resources. Centralized dashboard with automated detection and actionable insights.
+- 🟠 **[Intruder](https://www.intruder.io/)** - Continuous exposure management platform unifying AI penetration testing, attack surface monitoring, cloud security, and vulnerability management. Focuses on accurate, prioritized findings ready for action.
+- 🟣 **[Aurora Vulnerability Management](https://www.arcticwolf.com/)** - Unified visibility across known and unknown assets with exploitability and real-world threat signals for prioritization. Native patch management available through Resolve add-on.
+- 🔵 **[Saner CVEM](https://www.sanernow.com/)** - Continuous vulnerability and exposure management with comprehensive vulnerability databases. Supports compliance management and detailed reporting. Accurate threat intelligence with low false positives.
+- 🟢 **[Greenbone OpenVAS](https://www.openvas.org/)** - Open-source network and endpoint vulnerability scanner with automatic asset discovery, inventory tagging, and risk prioritization. Flags outdated software, web server vulnerabilities, and misconfigurations. Free community feed available; enterprise feed for paid version.
+- 🔴 **[OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/)** - Software composition analysis tool that identifies project dependencies and checks for known vulnerabilities. Relies primarily on NVD CPE matching; best for Java and .NET ecosystems despite some false positive/negative issues from CPE mismatches.
+- 🟡 **[Trivy](https://github.com/aquasecurity/trivy)** - Comprehensive vulnerability scanner for containers, Kubernetes, code repositories, and cloud configurations. Aggregates NVD, GitHub Security Advisories, and Linux distro advisories (Alpine, Debian, RHEL, Ubuntu). The default choice for container image scanning.
+- 🟠 **[Grype](https://github.com/anchore/grype)** - Vulnerability scanner for container images and filesystems from Anchore. Leans on its own curated feed layered on top of NVD and GHSA. Overlaps heavily with Trivy's OS-package coverage.
+- 🟣 **[OSV-Scanner](https://github.com/google/osv-scanner)** - Built by Google, queries the OSV.dev database directly. Strong coverage of npm, PyPI, Go modules, and crates.io. Manifest-first tool that works best against source repositories.
+- 🔵 **[Nuclei](https://github.com/projectdiscovery/nuclei)** - Fast and customizable vulnerability scanner based on simple YAML templates. Community-driven template repository for web application security testing.
+- 🟢 **[Nmap](https://nmap.org/)** - Command-line network and port vulnerability scanner for Windows, Linux, macOS, and FreeBSD. Discovers online/offline hosts, open/closed ports, firewalls, and associated vulnerabilities. With NSE scripts and vulscan, extends to advanced vulnerability detection.
+- 🔴 **[OpenSCAP](https://www.open-scap.org/)** - Linux-based platform implementing NIST SCAP standards. Compares CPE tags against vulnerability databases for detection. Supports security misconfiguration detection, compliance assessment, and severity ranking. Latest versions also support Windows.
+- 🟡 **[Lynis](https://cisofy.com/lynis/)** - Security auditing tool for Linux, macOS, and Unix-based systems. Detects system configuration issues and vulnerabilities with remediation suggestions (some manual). Provides hardening and compliance assessments.
+- 🟠 **[Wazuh](https://wazuh.com/)** - Open-source XDR platform integrating vulnerability detection and response. Supports rule matching and automated handling for host-based vulnerability management.
+- 🟣 **[CVE_Prioritizer](https://github.com/TURROKS/CVE_Prioritizer)** - Streamline vulnerability patching with CVSS, EPSS, and CISA's Known Exploited Vulnerabilities. Prioritize actions based on real-time threat information.
+- 🔵 **[Dependency-Track](https://github.com/DependencyTrack/dependency-track)** - Intelligent Component Analysis platform for identifying and reducing risk in the software supply chain. Uses SBOM analysis to track third-party dependencies and flag known vulnerabilities.
+- 🟢 **[VulnRepo](https://github.com/kac89/vulnrepo)** - Free vulnerability report generator and repository with end-to-end encryption. Complete templates for CWE, CVE, MITRE ATT&CK, and PCI DSS. Imports from Nmap/Nessus/Burp/OpenVAS/Trivy.
+- 🔴 **[PatrOwl](https://github.com/Patrowl/PatrowlManager)** - Open-source, smart and scalable security operations orchestration platform. Manages vulnerability assessment workflows and scanner orchestration.
+- 🟡 **[Seccubus](https://github.com/seccubus/seccubus)** - Easy automated vulnerability scanning, reporting and analysis. Automates the comparison of scans over time to identify changes.
+- 🟠 **[Jackhammer](https://github.com/olacabs/jackhammer)** - One security vulnerability assessment and management tool to solve security team problems. Orchestrates multiple scanners and manages findings.
+- 🟣 **[Mixeway](https://github.com/Mixeway/MixewayHub)** - Security orchestrator for vulnerability scanners enabling easy plug-in integration with CI/CD pipelines. One-click docker-compose configuration.
+- 🔵 **[Copacetic](https://github.com/project-copacetic/copacetic)** - CLI tool for directly patching container images. Enables remediation directly on container artifacts without rebuilding.
+- 🟢 **[KICS](https://github.com/Checkmarx/kics)** - Find security vulnerabilities, compliance issues, and infrastructure misconfigurations early in the development cycle of your Infrastructure-as-Code. By Checkmarx, supports Open Policy Agent.
+- 🔴 **[tfsec](https://github.com/aquasecurity/tfsec)** - Security scanner for Terraform code. Detects misconfigurations and vulnerabilities in infrastructure definitions.
+- 🟡 **[VulnScanner](https://github.com/hamzaaboelezz9-stack/VulnScanner)** - Modular Python vulnerability scanner for authorized web and TCP security testing. Safe checks, passive service detection, offline CVE candidates. Outputs HTML, SARIF JSON, and Markdown reports.
+- 🟠 **[Argus](https://github.com/harshaR-ctrl/Argus)** - Automated, AI-powered security analysis tool for Git repositories. Orchestrates Semgrep (SAST), Gitleaks (secrets), and OSV-Scanner (SCA) with LLM-powered remediation guidance.
+
+---
+
+# Security Awareness & Training
+
+- 🎯 **[Hack The Box (HTB)](https://www.hackthebox.com/)** - Comprehensive cyber readiness platform with extensive defensive security content. Following the acquisition of LetsDefend, HTB expanded its Blue Team offerings to 191+ modules, 120+ Sherlocks, and role-aligned learning paths covering 8 defensive job roles including Threat Hunter, SOC Manager, Incident Responder, and Information Security Specialist.
+- 📘 **[SOC Range (HTB)](https://www.hackthebox.com/)** - Self-paced, SIEM-mimicking environment where analysts practice the full mechanics of a live SOC shift: claiming alerts from a backlog, managing active investigations, using integrated security tools, following playbooks, documenting decisions, and closing investigations. Features 250+ alerts for triage and investigation.
+- 🔍 **[Sherlocks (HTB)](https://www.hackthebox.com/)** - Investigation scenarios where learners analyze evidence, reconstruct events, and determine what happened under realistic pressure. The catalog grew by 70% with sharpest gains in Cloud Security (+67%), DFIR (+58%), and Malware Analysis (+193%).
+- 🎓 **[SANS SEC450: Blue Team Fundamentals](https://www.sans.org/cyber-security-courses/blue-team-fundamentals-security-operations-and-analysis/)** - Comprehensive SOC analyst training covering SIEM operations, network security monitoring, threat intelligence, and incident triage. Prepares analysts for the GIAC Security Operations Certified (GSOC) certification with hands-on labs.
+- 🛡️ **[Centri (formerly Security Blue Team)](https://www.securityblue.team/)** - Practical defensive cybersecurity training with certifications including Blue Team Level 1 (BTL1) covering phishing analysis, digital forensics, threat intelligence, SIEM, and incident response; Blue Team Level 2 (BTL2) for advanced skills in malware analysis and threat hunting.
+- 🧪 **[LetsDefend](https://letsdefend.io/)** - Blue Team-focused training platform with hands-on labs simulating alert triage, log analysis, phishing investigation, and malware analysis. Provides browser-based Windows virtual environments without requiring local VM setup.
+- 💻 **[TryHackMe SOC Labs](https://tryhackme.com/)** - Extensive collection of free rooms focused on SOC training including SIEM analysis, incident response, Windows event log monitoring, and threat detection. Covers tools like Splunk, ELK, Wazuh, and Volatility.
+- 🏠 **[Digital Defense Core](https://github.com/abdul4rehman215/Digital-Defense-Core)** - 20 hands-on enterprise security engineering labs spanning identity security, network defense, forensics, SIEM, incident response, and patch automation. Covers the full lifecycle: Protect → Monitor → Detect → Contain → Investigate → Recover → Automate → Report.
+- 🔬 **[DoD Blue Team Network Lab](https://github.com/arisharazakhan-cpu/dod-blue-team-network-lab)** - End-to-end virtualized blue team lab simulating DoD-style enterprise defense. Includes pfSense firewall, VLAN segmentation, Windows Server AD, IDS/IPS, SIEM (Splunk), and STIG-aligned hardening scripts.
+- 🧰 **[Cybersecurity Home Lab](https://github.com/anishvedant/Cybersecurity-Home-Lab)** - Virtualized lab built on VirtualBox featuring pfSense, Wazuh, MITRE Caldera, Nessus, and Active Directory. Covers threat detection, red teaming, and SOC simulation with TheHive and Cortex integration.
+- 📚 **[GhoulSec Free Blue Team Path](https://github.com/cyberghoulfriend/GhoulSec)** - Structured free learning path with 5 levels covering tools, security operations, incident response, threat hunting, forensics, memory analysis, malware analysis, and reverse engineering.
+- 🌐 **[CyberDefenders](https://cyberdefenders.org/)** - Blue team CTF challenges for DFIR, threat hunting, SIEM, and investigations. Hands-on labs for practicing defensive skills in realistic scenarios.
+- 🎮 **[PicoCTF](https://picoctf.org/)** - Free capture-the-flag challenges from Carnegie Mellon for all skill levels, including forensics, cryptography, and reverse engineering tracks.
+- 🔐 **[RangeForce Community Edition](https://www.rangeforce.com/)** - Interactive, browser-based defensive security training with hands-on labs covering SOC operations and threat detection.
+- 🛠️ **[Immersive Labs Community](https://www.immersivelabs.com/)** - Hands-on labs across red and blue team skills with free community access.
+
+---
+
+# Miscellaneous
+
+- 🐉 **[Kali Linux](https://www.kali.org/)** - Debian-based Linux distribution purpose-built for security auditing, penetration testing, and digital forensics. Ships with 600+ pre-installed tools and is the most widely adopted security OS in the industry.
+- 🦜 **[Parrot Security OS](https://www.parrotsec.org/)** - Security-focused Linux distribution based on Debian. Includes a full arsenal of defensive and offensive tools alongside anonymity features and a lightweight desktop environment.
+- 🕵️ **[Tails](https://tails.boum.org/)** - Privacy and anonymity-focused live operating system that routes all connections through Tor. Leaves no trace on the host machine, making it ideal for sensitive investigative work.
+- 🔒 **[Whonix](https://www.whonix.org/)** - Anonymous operating system based on Tor, designed to prevent IP leaks and DNS leaks. Runs as two VMs: a Tor gateway and a workstation, isolating the user from the network .
+- 🧪 **[CAINE](https://www.caine-live.net/)** - Digital forensics live Linux distribution providing a complete forensic environment for evidence acquisition, analysis, and reporting.
+- 🧠 **[DEFT Linux](https://www.deftlinux.net/)** - Digital Evidence & Forensics Toolkit live distribution for incident response and forensic investigation.
+- 🧑‍💻 **[SIFT Workstation](https://www.sans.org/tools/sift-workstation/)** - SANS forensic workstation for Linux bundling Volatility, Plaso, The Sleuth Kit, and Eric Zimmerman's tools in a ready-to-use environment.
+- 🧰 **[Security Onion](https://securityonionsolutions.com/)** - Free and open-source Linux distribution for threat hunting, enterprise security monitoring, and log management. Bundles Zeek, Suricata, Elastic Stack, and more.
+- 🔵 **[SELKS](https://www.stamus-networks.com/open-source)** - Suricata-based IDS/IPS platform with Elasticsearch, Logstash, Kibana, and Scirius for network security monitoring.
+- 🟠 **[RockNSM](https://rocknsm.io/)** - Open-source network security monitoring platform for threat hunting and incident response.
+- 🟣 **[BlackArch Linux](https://blackarch.org/)** - Arch-based security distribution with 2,800+ tools for penetration testing and security research.
+- 🧑‍💻 **[ArchStrike](https://archstrike.org/)** - Arch Linux repository for security professionals and researchers.
+- 🔎 **[Pentoo](https://www.pentoo.ch/)** - Security-focused Gentoo-based Linux distribution with hardened kernel and security tools.
+- 🛡️ **[Fedora Security Lab](https://labs.fedoraproject.org/security/)** - Fedora spin for security auditing, forensics, and penetration testing.
+- 🧑‍💻 **[SamuraiWTF](https://github.com/SamuraiWTF/samuraiwtf)** - Web application penetration testing environment with pre-configured tools.
+- 🕵️‍♂️ **[PentestBox](https://pentestbox.org/)** - Penetration testing toolkit for Windows with a portable environment and pre-installed tools.
+- 🧑‍💻 **[Bugtraq](https://bugtraq-team.com/)** - Linux distribution for penetration testing and malware analysis.
+- 🔥 **[NodeZero](https://sourceforge.net/projects/nodezero/)** - Ubuntu-based penetration testing OS.
+- 🌐 **[Subgraph OS](https://subgraph.com/)** - Secure Linux distribution with hardened kernel and application sandboxing.
+- 🧑‍💻 **[Matriux Krypton](https://www.matriux.com/)** - Debian-based security distribution for penetration testing and forensics.
+
+---
+
+- 📦 **[Docker](https://www.docker.com/)** - Containerization platform widely used to deploy security tools in isolated environments. Enables reproducible lab setups and portable toolchains.
+- ☸️ **[Kubernetes](https://kubernetes.io/)** - Container orchestration platform for deploying and managing security tools at scale. Essential for cloud-native security operations.
+- 🏗️ **[Terraform](https://www.terraform.io/)** - Infrastructure as Code tool for provisioning and managing cloud infrastructure, including security labs and detection environments.
+- ⚙️ **[Ansible](https://www.ansible.com/)** - Automation platform for configuration management, application deployment, and security tool orchestration across endpoints and servers.
+- 🔧 **[Puppet](https://puppet.com/)** - Configuration management tool for enforcing security baselines and managing infrastructure at scale.
+- 🍳 **[Chef](https://www.chef.io/)** - Infrastructure automation platform for configuration management and compliance enforcement.
+- 🧂 **[SaltStack](https://saltproject.io/)** - Event-driven automation and configuration management for security operations at scale.
+- 📜 **[PowerShell](https://github.com/PowerShell/PowerShell)** - Cross-platform task automation and configuration management framework. Heavily used in Windows security operations and DFIR scripting.
+- 🐍 **[Python](https://www.python.org/)** - The dominant scripting language in security tooling. Used for automation, log parsing, malware analysis, and tool development across all blue team disciplines.
+- 🦀 **[Rust](https://www.rust-lang.org/)** - Systems programming language increasingly used for high-performance security tools including Hayabusa, YARA-X, and modern forensic utilities.
+- 🐹 **[Go](https://go.dev/)** - Programming language behind many modern security tools including Nuclei, Trivy, Coraza, and Velociraptor.
+
+---
+
+- 📓 **[Obsidian](https://obsidian.md/)** - Markdown-based knowledge management tool widely used by security analysts for note-taking during investigations, building personal knowledge bases, and documenting TTPs.
+- 📝 **[Notion](https://www.notion.so/)** - All-in-one workspace for documentation, incident tracking, and team collaboration in security operations.
+- 📋 **[Joplin](https://joplinapp.org/)** - Open-source note-taking and to-do application with end-to-end encryption. Suitable for storing sensitive investigation notes.
+- 🗂️ **[CherryTree](https://www.giuspen.net/cherrytree/)** - Hierarchical note-taking application with rich text and syntax highlighting. Popular for organizing pentest and IR notes.
+- 📊 **[draw.io / diagrams.net](https://www.drawio.com/)** - Free online diagramming tool for creating network diagrams, attack flows, and incident response workflows.
+- 🎨 **[Excalidraw](https://excalidraw.com/)** - Virtual whiteboard for sketching diagrams with a hand-drawn feel. Useful for quickly visualizing incident timelines and network topology.
+- 📈 **[Mermaid](https://mermaid.js.org/)** - JavaScript-based diagramming and charting tool that renders Markdown-inspired text definitions. Integrates with GitHub, GitLab, and documentation platforms.
+
+---
+
+- 🔐 **[KeePassXC](https://keepassxc.org/)** - Open-source, cross-platform password manager with strong encryption. Stores credentials, API keys, and sensitive investigation data locally.
+- 🛡️ **[Bitwarden](https://bitwarden.com/)** - Open-source password manager with self-hosting options. Suitable for teams managing shared credentials securely.
+- 🔑 **[HashiCorp Vault](https://www.vaultproject.io/)** - Secrets management platform for securely storing and accessing tokens, passwords, certificates, and encryption keys.
+- 🗝️ **[SOPS](https://github.com/getsops/sops)** - Secrets OPerationS tool for encrypting secrets in YAML, JSON, ENV, and INI files. Integrates with Git for secure configuration management.
+- 🔒 **[age](https://github.com/FiloSottile/age)** - Simple, modern, and secure file encryption tool. A replacement for GPG with a smaller attack surface.
+- 🛡️ **[GnuPG](https://gnupg.org/)** - Open-source implementation of the OpenPGP standard for encrypting and signing data and communications.
+
+---
+
+- 🗺️ **[Shodan](https://www.shodan.io/)** - Search engine for internet-connected devices. Useful for asset discovery, exposure assessment, and understanding external attack surface.
+- 🔎 **[Censys](https://censys.io/)** - Internet-wide scanning platform for discovering and monitoring hosts, networks, and services exposed to the internet.
+- 🌐 **[Netlas](https://netlas.io/)** - Internet intelligence platform for discovering internet-connected assets, analyzing domains and IP addresses, and identifying exposed services.
+- 📡 **[GreyNoise](https://www.greynoise.io/)** - System that collects and analyzes internet-wide scan and attack traffic. Helps analysts filter out benign noise and focus on real threats.
+- 🕵️ **[Intelligence X](https://intelx.io/)** - Search engine and data archive for leaked data, darknet intelligence, and historical threat intelligence.
+- 🔗 **[Maltego](https://www.maltego.com/)** - OSINT and link analysis tool for gathering and correlating threat intelligence from multiple sources.
+- 🕸️ **[SpiderFoot](https://github.com/smicallef/spiderfoot)** - Open-source intelligence automation tool that integrates with multiple data sources to gather threat intelligence.
+- 🌍 **[theHarvester](https://github.com/laramies/theHarvester)** - Tool for gathering emails, subdomains, hosts, and other open-source intelligence from public sources.
+- 📊 **[Recon-ng](https://github.com/lanmaster53/recon-ng)** - Full-featured web reconnaissance framework with a modular approach to open-source intelligence gathering.
+
+---
+
+- 📚 **[MITRE ATT&CK](https://attack.mitre.org/)** - Globally accessible knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations. The foundational framework for modern threat detection and hunting.
+- 🛡️ **[MITRE D3FEND](https://d3fend.mitre.org/)** - Knowledge graph of defensive countermeasures mapped to MITRE ATT&CK techniques. Helps defenders select appropriate mitigations.
+- 🧠 **[MITRE CAR](https://car.mitre.org/)** - Cyber Analytics Repository providing a knowledge base of analytics to detect adversary behavior mapped to ATT&CK.
+- 📜 **[MITRE Engenuity](https://mitre-engenuity.org/)** - Evaluations of security products against known adversary emulation plans, providing transparent performance data.
+- 🎯 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK for validating detection and response capabilities.
+- 🔥 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform for testing security controls using MITRE ATT&CK.
+- 📊 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises, adversary emulation, and detection validation.
+- 🧪 **[Sigma](https://github.com/SigmaHQ/sigma)** - Generic signature format for SIEM systems, enabling detection rule sharing across platforms.
+- 🔍 **[YARA](https://github.com/VirusTotal/yara)** - Pattern-matching tool for identifying and classifying malware samples. The standard for malware detection rules.
+- 🦖 **[YARA-X](https://github.com/VirusTotal/yara-x)** - Next-generation YARA engine written in Rust with improved performance, safety, and new features.
+- 📋 **[STIX/TAXII](https://oasis-open.github.io/cti-documentation/)** - Standards for structured threat intelligence sharing, enabling automated exchange of cyber threat intelligence.
+- 🕸️ **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence knowledge and observables, built on STIX 2.1.
+- 🔗 **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for gathering, sharing, storing, and correlating IOCs and threat intelligence.
+- 🐝 **[TheHive Project](https://thehive-project.org/)** - Scalable, open-source security incident response platform for SOCs, CSIRTs, and CERTs.
+- 🔬 **[Cortex](https://github.com/TheHive-Project/Cortex)** - Observable analysis and active response engine that integrates with TheHive for automated threat intelligence enrichment.
+
+---
+
+- 📖 **[Awesome Lists](https://github.com/sindresorhus/awesome)** - Collection of awesome lists covering countless topics, including security, DFIR, malware analysis, and threat intelligence.
+- 🛡️ **[Awesome Blue Team](https://github.com/fabacab/awesome-cybersecurity-blueteam)** - Curated list of awesome cybersecurity blue team resources, tools, and learning materials.
+- 🔍 **[Awesome DFIR](https://github.com/meirwah/awesome-incident-response)** - Curated list of incident response tools, resources, and frameworks.
+- 🦠 **[Awesome Malware Analysis](https://github.com/rshipp/awesome-malware-analysis)** - Curated list of malware analysis tools, frameworks, and resources.
+- 🌐 **[Awesome Threat Intelligence](https://github.com/hslatman/awesome-threat-intelligence)** - Curated list of threat intelligence resources, tools, and feeds.
+- 📡 **[Awesome Network Security](https://github.com/)** - Curated list of network security monitoring tools and resources.
+- 🔐 **[Awesome IAM](https://github.com/)** - Curated list of identity and access management resources and tools.
+- 🧪 **[Awesome Security](https://github.com/sbilly/awesome-security)** - Curated list of security resources, tools, and learning materials.
+
+---
+
+- 🌐 **[CISA](https://www.cisa.gov/)** - Cybersecurity and Infrastructure Security Agency resources, advisories, and free tools for defending critical infrastructure.
+- 🛡️ **[NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)** - Framework for improving critical infrastructure cybersecurity, providing standards, guidelines, and best practices.
+- 📜 **[NIST SP 800-61](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)** - Computer Security Incident Handling Guide providing guidance on incident response lifecycle.
+- 📋 **[NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)** - Security and Privacy Controls for Information Systems and Organizations.
+- 🎯 **[CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/)** - Consensus-based best practices for securely configuring operating systems, software, and networks.
+- 📊 **[CIS Controls](https://www.cisecurity.org/controls/)** - Prioritized set of actions to protect organizations and data from known cyber attack vectors.
+- 🔍 **[CVE](https://cve.mitre.org/)** - Common Vulnerabilities and Exposures database for identifying and tracking vulnerabilities.
+- 📈 **[NVD](https://nvd.nist.gov/)** - National Vulnerability Database providing vulnerability management data and analysis.
+- 🎯 **[EPSS](https://www.first.org/epss/)** - Exploit Prediction Scoring System estimating the likelihood a vulnerability will be exploited in the wild.
+- ⚠️ **[CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)** - Known Exploited Vulnerabilities catalog identifying vulnerabilities actively exploited in the wild.
+
+---
+
+- 🌐 **[SANS Internet Storm Center](https://isc.sans.edu/)** - Cooperative cyber threat monitor and alert system with daily diaries and threat insights.
+- 📰 **[Krebs on Security](https://krebsonsecurity.com/)** - Investigative security news and analysis covering cybercrime, data breaches, and defense.
+- 🖥️ **[BleepingComputer](https://www.bleepingcomputer.com/)** - Security news and technical support site covering vulnerabilities, malware, and exploits.
+- 📡 **[The Hacker News](https://thehackernews.com/)** - Security news platform covering cyber attacks, data breaches, and vulnerabilities.
+- 🔍 **[Threatpost](https://threatpost.com/)** - Security news platform covering vulnerabilities, threats, and defense.
+- 📊 **[Dark Reading](https://www.darkreading.com/)** - Security news and analysis platform covering enterprise security.
+- 🔐 **[SecurityWeek](https://www.securityweek.com/)** - Security news and analysis platform covering vulnerabilities and threats.
+- 🛡️ **[Infosecurity Magazine](https://www.infosecurity-magazine.com/)** - Security news and analysis platform covering industry trends.
+- 📖 **[Help Net Security](https://www.helpnetsecurity.com/)** - Security news platform covering vulnerabilities, defense, and awareness.
+- 🐦 **[SANS @RISK](https://www.sans.org/newsletters/at-risk/)** - Weekly newsletter summarizing the latest in security vulnerabilities and threats.
+
+---
+
+- 🎓 **[SANS Cyber Aces](https://www.cyberaces.org/)** - Free online courses covering operating systems, networking, and system administration for aspiring security professionals.
+- 📚 **[Cybrary](https://www.cybrary.it/)** - Free and paid cybersecurity training platform with courses on blue team operations, DFIR, and threat hunting.
+- 🎯 **[Blue Team Labs Online](https://blueteamlabs.online/)** - Gamified platform for practicing defensive security skills through realistic challenges.
+- 🧪 **[CyberDefenders](https://cyberdefenders.org/)** - Blue team CTF challenges for DFIR, threat hunting, SIEM, and investigations.
+- 🏠 **[TryHackMe](https://tryhackme.com/)** - Online platform for learning cybersecurity through hands-on labs and challenges, with extensive blue team content.
+- 🎮 **[Hack The Box Academy](https://academy.hackthebox.com/)** - Structured learning paths covering defensive security, SOC operations, and incident response.
+- 🛡️ **[RangeForce](https://www.rangeforce.com/)** - Interactive, browser-based defensive security training with hands-on labs.
+- 🔬 **[Immersive Labs](https://www.immersivelabs.com/)** - Hands-on cyber skills platform with labs across red and blue team disciplines.
+- 🧠 **[LetsDefend](https://letsdefend.io/)** - Blue Team-focused training platform with hands-on labs simulating alert triage and incident response.
+- 🎓 **[Security Blue Team](https://www.securityblue.team/)** - Practical defensive cybersecurity training with certifications including BTL1 and BTL2.
+
+---
+
+- 🛠️ **[Sysinternals Suite](https://learn.microsoft.com/en-us/sysinternals/)** - Essential Windows utilities from Microsoft for system monitoring, troubleshooting, and security analysis. Includes Process Explorer, Process Monitor, Autoruns, TCPView, and Sysmon.
+- 📊 **[NirSoft Utilities](https://www.nirsoft.net/)** - Collection of small, free Windows utilities for system monitoring, password recovery, and forensic analysis.
+- 🔍 **[Eric Zimmerman's Tools](https://ericzimmerman.github.io/)** - Suite of free Windows artifact analysis tools that have become de facto standards in DFIR.
+- 🧰 **[Velociraptor](https://github.com/Velocidex/velociraptor)** - Endpoint visibility and digital forensics platform for monitoring and responding to threats across large fleets.
+- 🦖 **[KAPE](https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape)** - Triage framework for rapid forensic artifact collection and processing on Windows systems.
+- 📸 **[FTK Imager](https://www.exterro.com/ftk-imager)** - Free tool for disk imaging and memory capture, widely used in incident response.
+- 💾 **[dc3dd](https://sourceforge.net/projects/dc3dd/)** - Enhanced version of dd with built-in hashing, logging, and error handling for forensic disk imaging.
+- 🧪 **[TestDisk](https://www.cgsecurity.org/wiki/TestDisk)** - Disk recovery tool for restoring lost partitions and repairing boot sectors.
+- 📸 **[PhotoRec](https://www.cgsecurity.org/wiki/PhotoRec)** - File recovery software for recovering deleted files from disks and storage media.
+- 🔐 **[hashdeep](https://github.com/jessek/hashdeep)** - Recursive file hashing tool with audit mode for verifying forensic image integrity.
+
+---
+
+- 📦 **[VirusTotal](https://www.virustotal.com/)** - Web-based malware analysis platform aggregating results from 70+ antivirus engines and URL scanners.
+- 🔬 **[Hybrid Analysis](https://www.hybrid-analysis.com/)** - Free malware analysis service powered by Falcon Sandbox.
+- 🧪 **[Joe Sandbox](https://www.joesandbox.com/)** - Deep malware analysis platform with interactive sandbox capabilities.
+- 🐍 **[ANY.RUN](https://any.run/)** - Interactive online malware sandbox with real-time analysis.
+- 🦖 **[CAPEv2](https://github.com/kevoreilly/CAPEv2)** - Advanced malware analysis sandbox forked from Cuckoo with config extraction and anti-evasion.
+- 🧠 **[FLOSS](https://github.com/mandiant/flare-floss)** - FireEye Labs Obfuscated String Solver for extracting and deobfuscating strings from malware.
+- 📊 **[CAPA](https://github.com/mandiant/capa)** - Tool for identifying capabilities in executable files.
+- 🔍 **[pefile](https://github.com/erocarrera/pefile)** - Python module for parsing Portable Executable (PE) files.
+- 🐉 **[Ghidra](https://ghidra-sre.org/)** - Open-source software reverse engineering framework from the NSA.
+- 🎯 **[x64dbg](https://x64dbg.com/)** - Open-source Windows debugger for x64 and x86 binaries.
+- 🧬 **[dnSpy](https://github.com/dnSpy/dnSpy)** - .NET debugger and assembly editor.
+- 🛠️ **[Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)** - Real-time monitoring tool for Windows file system, registry, and process activity.
+- 🎣 **[FakeNet-NG](https://github.com/mandiant/flare-fakenet-ng)** - Dynamic network analysis tool that simulates network services.
+- 🕸️ **[INetSim](https://www.inetsim.org/)** - Internet services simulation suite for malware analysis.
+
+---
+
+- 🛡️ **[ModSecurity](https://github.com/SpiderLabs/ModSecurity)** - Most widely deployed open-source web application firewall (WAF).
+- 📜 **[OWASP Core Rule Set](https://github.com/coreruleset/coreruleset)** - De facto standard rule set for ModSecurity and compatible WAFs.
+- 🔵 **[NAXSI](https://github.com/nbs-system/naxsi)** - Open-source, high-performance WAF for Nginx.
+- 🟠 **[BunkerWeb](https://github.com/bunkerity/bunkerweb)** - Next-generation open-source web application firewall built on Nginx.
+- 🟣 **[Coraza](https://github.com/corazawaf/coraza)** - Enterprise-grade, open-source WAF library written in Go.
+- 🟢 **[Wallarm](https://www.wallarm.com/)** - Cloud-native WAF and API security platform with automated threat detection.
+- 🔴 **[Wordfence](https://www.wordfence.com/)** - Security plugin for WordPress with built-in WAF and malware scanner.
+- 🛠️ **[Snyk](https://snyk.io/)** - Developer-first security platform for finding and fixing vulnerabilities in dependencies.
+- 🟡 **[SonarQube](https://www.sonarsource.com/products/sonarqube/)** - Open-source platform for continuous inspection of code quality and security.
+- 🟢 **[Semgrep](https://semgrep.dev/)** - Lightweight static analysis tool for finding bugs and enforcing code standards.
+- 🟣 **[CodeQL](https://codeql.github.com/)** - Semantic code analysis engine from GitHub for finding security vulnerabilities.
+- 🔵 **[Trivy](https://github.com/aquasecurity/trivy)** - Comprehensive vulnerability scanner for containers, Kubernetes, and code repositories.
+- 🟠 **[Grype](https://github.com/anchore/grype)** - Vulnerability scanner for container images and filesystems.
+- 🟣 **[GitLeaks](https://github.com/gitleaks/gitleaks)** - SAST tool for detecting hardcoded secrets in git repositories.
+- 🔴 **[TruffleHog](https://github.com/trufflesecurity/trufflehog)** - Secret scanning tool that searches git repositories for high-entropy strings and verified secrets.
+
+---
+
+- 🐍 **[Python](https://www.python.org/)** - The dominant scripting language in security tooling for automation, log parsing, malware analysis, and tool development.
+- 🦀 **[Rust](https://www.rust-lang.org/)** - Systems programming language increasingly used for high-performance security tools including Hayabusa and YARA-X.
+- 🐹 **[Go](https://go.dev/)** - Programming language behind many modern security tools including Nuclei, Trivy, and Velociraptor.
+- 📜 **[PowerShell](https://github.com/PowerShell/PowerShell)** - Cross-platform task automation and configuration management framework heavily used in Windows security operations.
+- 🐚 **[Bash](https://www.gnu.org/software/bash/)** - Unix shell and command language essential for Linux security operations and automation.
+- 🧰 **[Git](https://git-scm.com/)** - Distributed version control system essential for managing detection rules, scripts, and documentation.
+- 📦 **[Docker](https://www.docker.com/)** - Containerization platform for deploying security tools in isolated and reproducible environments.
+- ☸️ **[Kubernetes](https://kubernetes.io/)** - Container orchestration platform for deploying and managing security tools at scale.
+- 🏗️ **[Terraform](https://www.terraform.io/)** - Infrastructure as Code tool for provisioning cloud infrastructure and security labs.
+- ⚙️ **[Ansible](https://www.ansible.com/)** - Automation platform for configuration management and security tool orchestration.
+
+---
+
+- 📓 **[Obsidian](https://obsidian.md/)** - Markdown-based knowledge management tool for note-taking and building personal knowledge bases.
+- 📝 **[Notion](https://www.notion.so/)** - All-in-one workspace for documentation, incident tracking, and team collaboration.
+- 🗂️ **[CherryTree](https://www.giuspen.net/cherrytree/)** - Hierarchical note-taking application popular for organizing pentest and IR notes.
+- 📊 **[draw.io](https://www.drawio.com/)** - Free online diagramming tool for creating network diagrams and incident response workflows.
+- 🎨 **[Excalidraw](https://excalidraw.com/)** - Virtual whiteboard for sketching diagrams with a hand-drawn feel.
+- 📈 **[Mermaid](https://mermaid.js.org/)** - JavaScript-based diagramming tool that renders Markdown-inspired text definitions.
+- 🔐 **[KeePassXC](https://keepassxc.org/)** - Open-source, cross-platform password manager with strong encryption.
+- 🛡️ **[Bitwarden](https://bitwarden.com/)** - Open-source password manager with self-hosting options for teams.
+- 🔑 **[HashiCorp Vault](https://www.vaultproject.io/)** - Secrets management platform for securely storing tokens, passwords, and certificates.
+- 🗝️ **[SOPS](https://github.com/getsops/sops)** - Secrets OPerationS tool for encrypting secrets in YAML, JSON, ENV, and INI files.
+- 🔒 **[age](https://github.com/FiloSottile/age)** - Simple, modern, and secure file encryption tool.
+- 🛡️ **[GnuPG](https://gnupg.org/)** - Open-source implementation of the OpenPGP standard for encrypting and signing data.
+
+---
+
+- 🌐 **[CISA](https://www.cisa.gov/)** - Cybersecurity and Infrastructure Security Agency resources and advisories.
+- 🛡️ **[NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)** - Framework for improving critical infrastructure cybersecurity.
+- 📜 **[NIST SP 800-61](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final)** - Computer Security Incident Handling Guide.
+- 📋 **[NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)** - Security and Privacy Controls for Information Systems.
+- 🎯 **[CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/)** - Consensus-based best practices for securely configuring systems.
+- 📊 **[CIS Controls](https://www.cisecurity.org/controls/)** - Prioritized set of actions to protect organizations from cyber attacks.
+- 🔍 **[CVE](https://cve.mitre.org/)** - Common Vulnerabilities and Exposures database.
+- 📈 **[NVD](https://nvd.nist.gov/)** - National Vulnerability Database.
+- 🎯 **[EPSS](https://www.first.org/epss/)** - Exploit Prediction Scoring System.
+- ⚠️ **[CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)** - Known Exploited Vulnerabilities catalog.
+
+---
+
+- 🌐 **[SANS Internet Storm Center](https://isc.sans.edu/)** - Cooperative cyber threat monitor and alert system.
+- 📰 **[Krebs on Security](https://krebsonsecurity.com/)** - Investigative security news and analysis.
+- 🖥️ **[BleepingComputer](https://www.bleepingcomputer.com/)** - Security news and technical support site.
+- 📡 **[The Hacker News](https://thehackernews.com/)** - Security news platform covering cyber attacks and vulnerabilities.
+- 🔍 **[Threatpost](https://threatpost.com/)** - Security news platform covering vulnerabilities and threats.
+- 📊 **[Dark Reading](https://www.darkreading.com/)** - Security news and analysis platform.
+- 🔐 **[SecurityWeek](https://www.securityweek.com/)** - Security news and analysis platform.
+- 🛡️ **[Infosecurity Magazine](https://www.infosecurity-magazine.com/)** - Security news and analysis platform.
+- 📖 **[Help Net Security](https://www.helpnetsecurity.com/)** - Security news platform covering vulnerabilities and defense.
+- 🐦 **[SANS @RISK](https://www.sans.org/newsletters/at-risk/)** - Weekly newsletter summarizing security vulnerabilities and threats.
+
+---
+
+- 📚 **[MITRE ATT&CK](https://attack.mitre.org/)** - Knowledge base of adversary tactics, techniques, and procedures.
+- 🛡️ **[MITRE D3FEND](https://d3fend.mitre.org/)** - Knowledge graph of defensive countermeasures.
+- 🧠 **[MITRE CAR](https://car.mitre.org/)** - Cyber Analytics Repository for detecting adversary behavior.
+- 📜 **[MITRE Engenuity](https://mitre-engenuity.org/)** - Evaluations of security products against adversary emulation.
+- 🎯 **[Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)** - Library of tests mapped to MITRE ATT&CK.
+- 🔥 **[Caldera](https://github.com/mitre/caldera)** - Automated adversary emulation platform.
+- 📊 **[VECTR](https://github.com/SecurityRiskAdvisors/VECTR)** - Tracking tool for purple team exercises.
+- 🧪 **[Sigma](https://github.com/SigmaHQ/sigma)** - Generic signature format for SIEM systems.
+- 🔍 **[YARA](https://github.com/VirusTotal/yara)** - Pattern-matching tool for malware detection.
+- 🦖 **[YARA-X](https://github.com/VirusTotal/yara-x)** - Next-generation YARA engine written in Rust.
+- 📋 **[STIX/TAXII](https://oasis-open.github.io/cti-documentation/)** - Standards for structured threat intelligence sharing.
+- 🕸️ **[OpenCTI](https://www.opencti.io/)** - Open-source platform for managing cyber threat intelligence.
+- 🔗 **[MISP](https://www.misp-project.org/)** - Open-source threat intelligence platform for sharing IOCs.
+- 🐝 **[TheHive Project](https://thehive-project.org/)** - Open-source security incident response platform.
+- 🔬 **[Cortex](https://github.com/TheHive-Project/Cortex)** - Observable analysis and active response engine.
